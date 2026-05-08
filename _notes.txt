@@ -1,0 +1,73 @@
+NOTES
+=====
+
+Notes 
+-----
+- 
+---
+
+Todo
+----
+- normalise the URL style 
+    + /, /about 
+    + user/...; ...user/profile  
+    + admin/..., admin/manage-bookings  
+
+- use mongo/supabase 
+- rename all jsx files to have .jsx extension      
+- use tailwindStyles to defines common styles 
+-      
+---
+
+Ideas 
+-----
+- add custom themes to the tailwind.config file 
+- 
+---
+
+
+Pages 
+> Important     
+    * index / LandingCustomer
+    * about 
+    * services 
+        + protection services 
+        + interior / corpo 
+        + full detail / partner with us 
+        + exterior-wash
+
+    * contact 
+    * booking 
+        + bookingvehicle
+        + bookingtwo
+        + AddressDetails
+        + payment/:bookingId
+        + confirm
+
+    * profiles 
+    * login 
+    * sign up 
+    * vehicle page 
+    * deactivate-account
+    * password-reset
+
+    * EditEmployeeProfile
+    * EditCustomerProfile
+    * RoleSelection
+
+    # --- business side 
+    * EmployeeManagement
+    * LandingEmployee
+    * manage-bookings 
+    * profile-management
+    * cleaning-services/management
+
+
+> Less important 
+    * cards / my-cards 
+    * bookinghistory ? 
+---
+
+Project structure 
+- 
+---
