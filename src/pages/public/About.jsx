@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AboutUs.css';
-import './components/Footer';
 
-const AboutUs = () => {
+import './about.css';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+// import '../../components/Footer';
+
+
+export default function About() {
     const [visibleSections, setVisibleSections] = useState({});
     const [activeValue, setActiveValue] = useState(null);
     const navigate = useNavigate();
@@ -116,6 +120,8 @@ const AboutUs = () => {
 
     return (
         <div className="about-us">
+            <Navbar />
+            
             <div className="about-hero">
                 <h1>About MobileGlow Car Wash</h1>
                 <p>Transforming car care with passion and precision</p>
@@ -317,5 +323,3 @@ const AboutUs = () => {
         </div>
     );
 };
-
-export default AboutUs;

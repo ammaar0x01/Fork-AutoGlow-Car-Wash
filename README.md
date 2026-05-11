@@ -11,6 +11,8 @@
 ## More info
 Welcome to the Mobile Car Wash application repository! This project is designed to provide users with the convenience of having their cars washed at their desired location through a seamless mobile app experience.
 
+This is a web-based car wash management system that allows customers to create accounts, save vehicles, and book car wash services online. The platform also includes employee and manager portals for managing bookings, monitoring operations, and tracking employee performance and productivity.
+
 In this repository, you'll find the source code for the application that powers the mobile car wash service, allowing users to easily schedule, manage, and track their car wash appointments.
 
 

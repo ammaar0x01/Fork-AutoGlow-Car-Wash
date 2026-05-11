@@ -79,7 +79,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
+import logo from "../assets/logo.jpg";
 
 export default function Navbar() {
     console.log("NEW NAVBAR")

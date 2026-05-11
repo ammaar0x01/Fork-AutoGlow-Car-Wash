@@ -1,6 +1,12 @@
 NOTES
 =====
 
+Planning
+--------
+- 
+---
+
+
 Notes 
 -----
 - 
@@ -22,6 +28,9 @@ Todo
 Ideas 
 -----
 - add custom themes to the tailwind.config file 
+- (for dashboard)
+    + add feature to view performance for the business / washer 
+    + add review section 
 - 
 ---
 
