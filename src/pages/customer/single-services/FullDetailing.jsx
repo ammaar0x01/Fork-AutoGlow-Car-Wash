@@ -1,46 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import Navbar from '../../components/Navbar';
-import './ExteriorWashService.css';
+import './FullDetailing.css';
 import Footer from '../../components/Footer';
-
-import paint from '../../../assets/paint.png';
+import waxing from '../../../assets/waxing.png';
 import hero from '../../../assets/hero-carwash.jpg';
-import tire_balm from '../../../assets/tire_balm.png';
-import glass from '../../../assets/glass.png';
+import interior from '../../../assets/interior.png';
+import engine from '../../../assets/engine.png';
 
-// Custom hook to handle scroll-based animation
-const useScrollAnimation = () => {
-    const refs = useRef([]);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-            }
-        );
-
-        refs.current.forEach(ref => {
-            if (ref) observer.observe(ref);
-        });
-
-        return () => {
-            refs.current.forEach(ref => {
-                if (ref) observer.unobserve(ref);
-            });
-        };
-    }, []);
-
-    return refs;
-};
-
-function ProtectionService() {
+export default function FullDetailing() {
     const [activeIndex, setActiveIndex] = useState(null);
     const serviceRefs = useScrollAnimation();
     const faqRefs = useScrollAnimation();
@@ -51,23 +20,24 @@ function ProtectionService() {
 
     const services = [
         {
-            title: 'Paint Protection',
+            title: 'Exterior Polishing & Waxing',
             description:
                 'A thorough hand wash, wheel clean, and dry to remove dirt, grime, and road salt. Perfect for regular vehicle maintenance.',
-            image: paint,
+            image: waxing,
         },
         {
-            title: 'Tire and Trim Protectant',
+            title: 'Interior Deep Cleaning',
             description:
                 'Protect and enhance your car’s finish with our premium wax and polish. Adds shine and shields paint from environmental wear.',
-            image: tire_balm,
+            image: interior,
         },
         {
-            title: 'Glass Sealant Application',
+            title: 'Engine Bay Cleaning',
             description:
                 'Deep clean and dress your tires and wheels for a showroom-ready appearance that lasts.',
-            image: glass,
+            image: engine,
         },
+
     ];
 
 
@@ -106,7 +76,7 @@ function ProtectionService() {
                     textShadow: '0 2px 6px rgba(0,0,0,0.7)',
                 }}
             >
-                <h1>Protection Service</h1>
+                <h1>Full Detailing Services</h1>
                 <p>Keep your vehicles spotless and professional with our expertly crafted wash options.</p>
             </section>
 
@@ -131,7 +101,7 @@ function ProtectionService() {
             <section className="book-now-container">
                 <div className="book-now-container">
                     <button
-                        onClick={() => (window.location.href = "/login")}
+                        onClick={() => (window.location.href = "/booking")}
                         className="cta-button primary"
                     >
                         BOOK NOW
@@ -140,7 +110,7 @@ function ProtectionService() {
             </section>
 
             <section className="faq-section app-content">
-                <h2>Frequently Asked Questions About Protection Service</h2>
+                <h2>Frequently Asked Questions About Exterior Wash</h2>
                 <div className="accordion">
                     {faqs.map((faq, idx) => (
                         <div
@@ -174,4 +144,35 @@ function ProtectionService() {
     );
 }
 
-export default ProtectionService;
+
+// Custom hook to handle scroll-based animation
+const useScrollAnimation = () => {
+    const refs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        refs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => {
+            refs.current.forEach(ref => {
+                if (ref) observer.unobserve(ref);
+            });
+        };
+    }, []);
+
+    return refs;
+};

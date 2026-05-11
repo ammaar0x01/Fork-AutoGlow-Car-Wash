@@ -1,103 +1,141 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./NavbarCustomer.css";
+import logo from "../assets/icons/logo.jpg";
+import NavbarTemplate from "./NavbarTemplate";
+import Navbar from "./Navbar";
 
-import logo from "../../assets/icons/logo.jpg";
 
-const NavbarCustomer = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
+// export default function NavbarCustomer(){
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userRoleDescription");
-    localStorage.removeItem("authToken");
-    localStorage.removeItem("userId");
-    navigate("/login");
-  };
+//   const handleLogout = () => {
+//     localStorage.removeItem("userEmail");
+//     localStorage.removeItem("userRoleDescription");
+//     localStorage.removeItem("authToken");
+//     localStorage.removeItem("userId");
+//     navigate("/login");
+//   };
 
-  const userEmail = localStorage.getItem("userEmail");
-  const userInitial = userEmail ? userEmail.charAt(0).toUpperCase() : "P";
+//   const userEmail = localStorage.getItem("userEmail");
+//   const userInitial = userEmail ? userEmail.charAt(0).toUpperCase() : "P";
 
-  // ✅ Scroll smoothly to "Our Services" section
-  const handleServices = () => {
-    const section = document.getElementById("our-services");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const handleAboutUs = () => navigate("/AboutUsCustomer");
-  const handleContactUs = () => navigate("/ContactUsCustomer");
-  const handleLogoClick = () => navigate("/LandingCustomer");
+//   // ✅ Scroll smoothly to "Our Services" section
+//   const handleServices = () => {
+//     const section = document.getElementById("our-services");
+//     if (section) {
+//       section.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+//   const handleAboutUs = () => navigate("/AboutUsCustomer");
+//   const handleContactUs = () => navigate("/ContactUsCustomer");
+//   const handleLogoClick = () => navigate("/LandingCustomer");
+//   return (
+//     <nav className="customer-navbar">
+//       <div className="app-content navbar-inner">
+//         <div className="navbar-left" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
+//           <img src={logo} alt="Mobile Car Wash Logo" className="logo-img" />
+//         </div>
+
+//         <div className="nav-links">
+//           <button className="nav-btn" onClick={handleServices}>
+//             Our Services
+//           </button>
+//           <button className="nav-btn" onClick={handleAboutUs}>
+//             About Us
+//           </button>
+//           <button className="nav-btn" onClick={handleContactUs}>
+//             Contact Us
+//           </button>
+
+//           {/* Hamburger/X Button */}
+//           <button
+//             className={`hamburger ${isMenuOpen ? "open" : ""}`}
+//             onClick={toggleMenu}
+//           >
+//             <span></span>
+//             <span></span>
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Slide-In Side Menu */}
+//       <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
+//         <ul>
+//           <li>
+//             <a href="/profiles">Profile</a>
+//           </li>
+//           <li>
+//             <a href="/vehicles">Vehicle Page</a>
+//           </li>
+//           <li>
+//             <a href="/bookinghistory">Booking History</a>
+//           </li>
+
+//           {/* ✅ New link for CustomerCardsPage */}
+//           <li>
+//             <a href="/my-cards">My Cards</a>
+//           </li>
+
+//           <li>
+//             <a href="/password-reset">Change Password</a>
+//           </li>
+//           <li>
+//             <a href="/deactivate-account">Deactivate Account</a>
+//           </li>
+//           <li>
+//             <button onClick={handleLogout} className="logout-btn">
+//               Log Out
+//             </button>
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Overlay */}
+//       {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+//     </nav>
+//   );
+// };
+
+
+
+
+// newer0 
+export default function NavbarCustomer() {
+  const defaultNavLinks = [
+    { label: "Profile", path: "/login" },
+
+    // { label: "About", path: "/about" },
+    // { label: "Services", scrollTo: "our-services" },
+    // { label: "Contact", path: "/contact" },
+  ];
+
+  const defaultAuthLinks = [
+    { label: "Vehicles", path: "/roles", variant: "primary" },
+    { label: "Bookings", path: "/roles", variant: "primary" },
+    { label: "Cards", path: "/roles", variant: "primary" },
+    { label: "Vehicles", path: "/roles", variant: "primary" },
+  ];
+
+  const defaultMobileLinks = [
+    { label: "About Us", path: "/about" },
+    { label: "Our Services", scrollTo: "our-services" },
+    { label: "Contact Us", path: "/contact" },
+    { label: "Sign Up", path: "/roles" },
+    { label: "Log In", path: "/login" },
+  ];
+
   return (
-    <nav className="customer-navbar">
-      <div className="app-content navbar-inner">
-        <div className="navbar-left" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
-          <img src={logo} alt="Mobile Car Wash Logo" className="logo-img" />
-        </div>
-
-        <div className="nav-links">
-          <button className="nav-btn" onClick={handleServices}>
-            Our Services
-          </button>
-          <button className="nav-btn" onClick={handleAboutUs}>
-            About Us
-          </button>
-          <button className="nav-btn" onClick={handleContactUs}>
-            Contact Us
-          </button>
-
-          {/* Hamburger/X Button */}
-          <button
-            className={`hamburger ${isMenuOpen ? "open" : ""}`}
-            onClick={toggleMenu}
-          >
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-
-      {/* Slide-In Side Menu */}
-      <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
-        <ul>
-          <li>
-            <a href="/profiles">Profile</a>
-          </li>
-          <li>
-            <a href="/vehicles">Vehicle Page</a>
-          </li>
-          <li>
-            <a href="/bookinghistory">Booking History</a>
-          </li>
-
-          {/* ✅ New link for CustomerCardsPage */}
-          <li>
-            <a href="/my-cards">My Cards</a>
-          </li>
-
-          <li>
-            <a href="/password-reset">Change Password</a>
-          </li>
-          <li>
-            <a href="/deactivate-account">Deactivate Account</a>
-          </li>
-          <li>
-            <button onClick={handleLogout} className="logout-btn">
-              Log Out
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      {/* Overlay */}
-      {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
-    </nav>
-  );
-};
-
-export default NavbarCustomer;
+    <NavbarTemplate
+      navLinks={defaultNavLinks}
+      authLinks={defaultAuthLinks}
+      mobileLinks={defaultMobileLinks}
+    />
+  )
+}

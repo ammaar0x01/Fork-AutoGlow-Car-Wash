@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import image1 from '../../assets/image-1.png';
 import './RoleSelection.css';
 
-const RoleSelection = ({ onBack }) => {
+
+export default function RoleSelection({ onBack }) {
     const navigate = useNavigate();
 
     const handleSelectRole = (role) => {
@@ -63,5 +65,3 @@ const RoleSelection = ({ onBack }) => {
         </div>
     );
 };
-
-export default RoleSelection;

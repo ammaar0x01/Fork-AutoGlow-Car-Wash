@@ -1,12 +1,10 @@
-// Inga
-// LandingCustomer.js
-import "./LandingCustomer.css";
-import NavbarCustomer from "../components/NavbarCustomer"; // fixed path
-import Footer from "../components/Footer"; // fixed path
 import { useScrollReveal } from "../../hooks/useScrollReveal"; // adjust path
 import butterfly from "../../assets/about-us.png";
 import React, { useState, useEffect, useRef } from "react";
 
+import "./LandingCustomer.css";
+import NavbarCustomer from "../components/NavbarCustomer"; // fixed path
+import Footer from "../components/Footer"; // fixed path
 
 import FULL_WASH_IMAGE from "../../assets/full-wash.png";
 import DETAILING_IMAGE from "../../assets/detailing.png";
@@ -14,150 +12,14 @@ import WAXING_IMAGE from "../../assets/waxing.png";
 import INTERIOR_IMAGE from "../../assets/interior.png";
 import HERO_IMAGE from "../../assets/hero-carwash.jpg";
 
-
 import ReviewCarousel from "../components/ReviewCarousel";
 import POLISH_IMAGE from "../../assets/polish.png";
 import ENGINE_IMAGE from "../../assets/engine-wash.jpg";
 import ABOUT_IMAGE from "../../assets/about-us.png";
 import MISSION_IMAGE from "../../assets/mission-bg.jpg";
 
-// CategoryCard Component - UPDATED
-const CategoryCard = ({ title, description, imageUrl }) => {
-    return (
-        <div className="category-card">
-            <div className="category-image-container">
-                <img src={imageUrl} alt={title} className="category-image" />
-                <div className="category-overlay">
-                    <div className="category-content">
-                        <h3 className="category-title">{title}</h3>
-                        <p className="category-description">{description}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
 
-const CountUp = ({ end, start = 0, duration = 2000 }) => {
-  const [count, setCount] = useState(start);
-  const ref = useRef(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          let startTime = null;
-
-          const step = (timestamp) => {
-            if (!startTime) startTime = timestamp;
-            const progress = timestamp - startTime;
-            const progressRatio = Math.min(progress / duration, 1);
-            const currentCount = Math.floor(
-              progressRatio * (end - start) + start
-            );
-            setCount(currentCount);
-            if (progress < duration) {
-              requestAnimationFrame(step);
-            } else {
-              setCount(end);
-            }
-          };
-
-          requestAnimationFrame(step);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    const currentRef = ref.current;
-    if (currentRef) observer.observe(currentRef);
-
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, [end, start, duration]);
-
-  return (
-    <h1 ref={ref} className="stat-number">
-      {count}+
-    </h1>
-  );
-};
-
-// Zoom Section Component for About and Mission
-const ZoomSection = ({ image, title, content, isRight = false }) => {
-    const imageRef = useRef(null);
-    const contentRef = useRef(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (imageRef.current && contentRef.current) {
-                const element = imageRef.current;
-                const contentElement = contentRef.current;
-                const rect = element.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-
-                // Start zoom effect when element enters viewport
-                if (rect.top < windowHeight && rect.bottom > 0) {
-                    const progress = 1 - (rect.top / windowHeight);
-                    const zoomLevel = 1 + (progress * 0.2); // 20% zoom max
-                    const opacity = Math.min(1, progress * 2);
-
-                    element.style.transform = `scale(${zoomLevel})`;
-                    contentElement.style.opacity = opacity;
-                    contentElement.style.transform = `translateY(${(1 - progress) * 50}px)`;
-                }
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    return (
-        <section className={`zoom-section ${isRight ? 'right' : 'left'}`}>
-            <div className="zoom-container">
-                <div className="zoom-image-container" ref={imageRef}>
-                    <img src={image} alt={title} className="zoom-image" />
-                </div>
-                <div className="zoom-content" ref={contentRef}>
-                    <h1 className="zoom-title">{title}</h1>
-                    <div className="zoom-text">
-                        {content}
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const WhyChooseUsRow = ({ image, isRight, heading, children }) => {
-  const [headingRef, headingStyle] = useScrollReveal(isRight ? "right" : "left");
-
-  return (
-      <ZoomSection
-          image={image}
-          isRight={isRight}
-          content={
-            <div className="text-column">
-              <h3 ref={headingRef} style={headingStyle}>
-                {heading}
-              </h3>
-              {children}
-            </div>
-          }
-      />
-  );
-};
-
-
-// Main LandingPublic Component
 export default function LandingCustomer() {
-
     const categories = [
         {
             title: "Full Wash",
@@ -458,3 +320,136 @@ export default function LandingCustomer() {
     </div>
   );
 }
+
+// CategoryCard Component - UPDATED
+const CategoryCard = ({ title, description, imageUrl }) => {
+    return (
+        <div className="category-card">
+            <div className="category-image-container">
+                <img src={imageUrl} alt={title} className="category-image" />
+                <div className="category-overlay">
+                    <div className="category-content">
+                        <h3 className="category-title">{title}</h3>
+                        <p className="category-description">{description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const CountUp = ({ end, start = 0, duration = 2000 }) => {
+  const [count, setCount] = useState(start);
+  const ref = useRef(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          let startTime = null;
+
+          const step = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const progressRatio = Math.min(progress / duration, 1);
+            const currentCount = Math.floor(
+              progressRatio * (end - start) + start
+            );
+            setCount(currentCount);
+            if (progress < duration) {
+              requestAnimationFrame(step);
+            } else {
+              setCount(end);
+            }
+          };
+
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [end, start, duration]);
+
+  return (
+    <h1 ref={ref} className="stat-number">
+      {count}+
+    </h1>
+  );
+};
+
+// Zoom Section Component for About and Mission
+const ZoomSection = ({ image, title, content, isRight = false }) => {
+    const imageRef = useRef(null);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (imageRef.current && contentRef.current) {
+                const element = imageRef.current;
+                const contentElement = contentRef.current;
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Start zoom effect when element enters viewport
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    const progress = 1 - (rect.top / windowHeight);
+                    const zoomLevel = 1 + (progress * 0.2); // 20% zoom max
+                    const opacity = Math.min(1, progress * 2);
+
+                    element.style.transform = `scale(${zoomLevel})`;
+                    contentElement.style.opacity = opacity;
+                    contentElement.style.transform = `translateY(${(1 - progress) * 50}px)`;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <section className={`zoom-section ${isRight ? 'right' : 'left'}`}>
+            <div className="zoom-container">
+                <div className="zoom-image-container" ref={imageRef}>
+                    <img src={image} alt={title} className="zoom-image" />
+                </div>
+                <div className="zoom-content" ref={contentRef}>
+                    <h1 className="zoom-title">{title}</h1>
+                    <div className="zoom-text">
+                        {content}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const WhyChooseUsRow = ({ image, isRight, heading, children }) => {
+  const [headingRef, headingStyle] = useScrollReveal(isRight ? "right" : "left");
+
+  return (
+      <ZoomSection
+          image={image}
+          isRight={isRight}
+          content={
+            <div className="text-column">
+              <h3 ref={headingRef} style={headingStyle}>
+                {heading}
+              </h3>
+              {children}
+            </div>
+          }
+      />
+  );
+};

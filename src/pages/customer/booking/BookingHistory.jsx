@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { BsThreeDotsVertical } from "react-icons/bs";
+
 import NavbarCustomer from "../../components/NavbarCustomer";
 import Footer from "../../components/Footer";
 import "./BookingHistory.css";
-import { BsThreeDotsVertical } from "react-icons/bs";
 
-const BookingHistory = () => {
+
+export default function BookingHistory() {
   const [bookings, setBookings] = useState([]);
   const [paymentStatusMap, setPaymentStatusMap] = useState({});
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -241,5 +243,3 @@ className={`em-table-row ${booking.cancelled ? "cancelled-row" : ""}`}
     </div>
   );
 };
-
-export default BookingHistory;

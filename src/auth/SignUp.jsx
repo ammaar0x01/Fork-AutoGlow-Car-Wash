@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+
 import image1 from '../../assets/image-1.png';
+
 
 const styles = {
     pageContainer: {
@@ -28,7 +30,7 @@ const styles = {
     },
 };
 
-const SignUp = () => {
+export default function SignUp() {
     const location = useLocation();
     const selectedRole = location.state?.role || 'Customer';
 
@@ -451,7 +453,3 @@ const SignUp = () => {
         </>
     );
 };
-
-export default SignUp;
-
-

@@ -1,12 +1,11 @@
-// components/Footer.js
 import React from "react";
 
-import "./Footer.css"; // optional if you want a separate CSS
+import "./Footer.css"; 
 import facebookLogo from "../assets/icons/facebook_logo.png";
 import instaLogo from "../assets/icons/insta_logo.png";
 
 
-const Footer = () => {
+export default function Footer(){
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -72,5 +71,3 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;

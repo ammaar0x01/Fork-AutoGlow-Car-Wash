@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { MdFilterList } from "react-icons/md";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { BsThreeDotsVertical } from "react-icons/bs";
+
 import NavbarEmployee from "../../../screens/components/NavbarEmployee";
 import Footer from "../../components/Footer";
 import "../../components/Footer.css";
-import { MdFilterList } from "react-icons/md";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./ManageBookings.css";
-import { BsThreeDotsVertical } from "react-icons/bs";
 
-const ManageBookings = () => {
+
+export default function ManageBookings() {
   const navigate = useNavigate();
 
   const [bookings, setBookings] = useState([]);
@@ -498,5 +500,3 @@ const ManageBookings = () => {
     </div>
   );
 };
-
-export default ManageBookings;

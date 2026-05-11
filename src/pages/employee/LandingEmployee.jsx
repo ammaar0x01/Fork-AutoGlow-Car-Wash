@@ -1,18 +1,15 @@
-// src/screens/employee/LandingEmployee.js
 import React from "react";
+
 import NavbarEmployee from "../components/NavbarEmployee";
 import Footer from "../components/Footer";
-import "./LandingEmployee.css";
-
 import bookingsIcon from "../../assets/bookings.png";
 import employeesIcon from "../../assets/employees.png";
 import servicesIcon from "../../assets/services.png";
 import performanceIcon from "../../assets/performance.png";
-
-
 import heroCarwash from "../../assets/hero-carwash.jpg";
 
-const LandingEmployee = () => {
+
+export default function LandingEmployee(){
     return (
         <div className="employee-landing-page">
             <NavbarEmployee />
@@ -81,5 +78,3 @@ const LandingEmployee = () => {
         </div>
     );
 };
-
-export default LandingEmployee;

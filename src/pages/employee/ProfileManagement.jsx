@@ -1,10 +1,10 @@
-//ProfileManagement focuses on maintenance tasks for existing accounts (edit basic info, toggle status)
-
 import React, { useState, useEffect } from 'react';
+
 import { customerService } from '../../services/customerService';
 import './ProfileManagement.css';
 
-const ProfileManagement = () => {
+
+export default function ProfileManagement(){
     const [customers, setCustomers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -300,5 +300,3 @@ const ProfileManagement = () => {
         </div>
     );
 };
-
-export default ProfileManagement;

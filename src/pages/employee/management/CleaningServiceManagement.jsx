@@ -1,90 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { apiClient } from '../../../services/api';
+
 import './CleaningServiceManagement.css';
 import NavbarEmployee from "../../components/NavbarEmployee";
 import Footer from '../../components/Footer';
 import '../../components/Footer.css';
 
-// ========================================
-// API CONFIGURATION
-// ========================================
-const CLEANING_SERVICE_API = '/api/cleaningservice';
 
-const cleaningServiceService = {
-    getAllCleaningServices: async () => {
-        try {
-            console.log('Fetching all cleaning services...');
-            const response = await apiClient.get(`${CLEANING_SERVICE_API}/getAll`);
-            console.log('Cleaning services fetched:', response.data);
-            return response.data;
-        } catch (error) {
-            console.error('Error fetching cleaning services:', error);
-            console.error('Error status:', error.response?.status);
-            console.error('Error data:', error.response?.data);
-            throw error;
-        }
-    },
-
-    getCleaningServiceById: async (id) => {
-        try {
-            console.log(`Fetching cleaning service with ID: ${id}`);
-            const response = await apiClient.get(`${CLEANING_SERVICE_API}/read/${id}`);
-            console.log('Cleaning service fetched:', response.data);
-            return response.data;
-        } catch (error) {
-            console.error(`Error fetching cleaning service ${id}:`, error);
-            throw error;
-        }
-    },
-
-    createCleaningService: async (serviceData) => {
-        try {
-            console.log('Creating cleaning service with data:', serviceData);
-            const response = await apiClient.post(`${CLEANING_SERVICE_API}/create`, serviceData);
-            console.log('Cleaning service created:', response.data);
-            return { success: true, data: response.data };
-        } catch (error) {
-            console.error('Error creating cleaning service:', error);
-            console.error('Error status:', error.response?.status);
-            console.error('Error data:', error.response?.data);
-            if (error.response?.status === 400 && error.response?.data?.message?.includes('already exists')) {
-                return { success: false, error: 'DUPLICATE', message: 'Service already exists with this name' };
-            }
-            throw error;
-        }
-    },
-
-    updateCleaningService: async (id, serviceData) => {
-        try {
-            console.log(`Updating cleaning service with ID: ${id}`, serviceData);
-            const response = await apiClient.put(`${CLEANING_SERVICE_API}/update/${id}`, serviceData);
-            console.log('Cleaning service updated:', response.data);
-            return response.data;
-        } catch (error) {
-            console.error(`Error updating cleaning service ${id}:`, error);
-            console.error('Error status:', error.response?.status);
-            console.error('Error data:', error.response?.data);
-            throw error;
-        }
-    },
-
-    deleteCleaningService: async (id) => {
-        try {
-            console.log(`Deleting cleaning service with ID: ${id}`);
-            const response = await apiClient.delete(`${CLEANING_SERVICE_API}/delete/${id}`);
-            console.log('Delete response status:', response.status);
-            return response.status === 204;
-        } catch (error) {
-            console.error(`Error deleting cleaning service ${id}:`, error);
-            console.error('Error status:', error.response?.status);
-            console.error('Error data:', error.response?.data);
-            throw error;
-        }
-    }
-};
-
-const CleaningServiceManagement = () => {
+export default function CleaningServiceManagement(){
     // ========================================
     // HOOKS & STATE
     // ========================================
@@ -802,4 +726,81 @@ const CleaningServiceManagement = () => {
     );
 };
 
-export default CleaningServiceManagement;
+
+// ========================================
+// API CONFIGURATION
+// ========================================
+const CLEANING_SERVICE_API = '/api/cleaningservice';
+
+const cleaningServiceService = {
+    getAllCleaningServices: async () => {
+        try {
+            console.log('Fetching all cleaning services...');
+            const response = await apiClient.get(`${CLEANING_SERVICE_API}/getAll`);
+            console.log('Cleaning services fetched:', response.data);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching cleaning services:', error);
+            console.error('Error status:', error.response?.status);
+            console.error('Error data:', error.response?.data);
+            throw error;
+        }
+    },
+
+    getCleaningServiceById: async (id) => {
+        try {
+            console.log(`Fetching cleaning service with ID: ${id}`);
+            const response = await apiClient.get(`${CLEANING_SERVICE_API}/read/${id}`);
+            console.log('Cleaning service fetched:', response.data);
+            return response.data;
+        } catch (error) {
+            console.error(`Error fetching cleaning service ${id}:`, error);
+            throw error;
+        }
+    },
+
+    createCleaningService: async (serviceData) => {
+        try {
+            console.log('Creating cleaning service with data:', serviceData);
+            const response = await apiClient.post(`${CLEANING_SERVICE_API}/create`, serviceData);
+            console.log('Cleaning service created:', response.data);
+            return { success: true, data: response.data };
+        } catch (error) {
+            console.error('Error creating cleaning service:', error);
+            console.error('Error status:', error.response?.status);
+            console.error('Error data:', error.response?.data);
+            if (error.response?.status === 400 && error.response?.data?.message?.includes('already exists')) {
+                return { success: false, error: 'DUPLICATE', message: 'Service already exists with this name' };
+            }
+            throw error;
+        }
+    },
+
+    updateCleaningService: async (id, serviceData) => {
+        try {
+            console.log(`Updating cleaning service with ID: ${id}`, serviceData);
+            const response = await apiClient.put(`${CLEANING_SERVICE_API}/update/${id}`, serviceData);
+            console.log('Cleaning service updated:', response.data);
+            return response.data;
+        } catch (error) {
+            console.error(`Error updating cleaning service ${id}:`, error);
+            console.error('Error status:', error.response?.status);
+            console.error('Error data:', error.response?.data);
+            throw error;
+        }
+    },
+
+    deleteCleaningService: async (id) => {
+        try {
+            console.log(`Deleting cleaning service with ID: ${id}`);
+            const response = await apiClient.delete(`${CLEANING_SERVICE_API}/delete/${id}`);
+            console.log('Delete response status:', response.status);
+            return response.status === 204;
+        } catch (error) {
+            console.error(`Error deleting cleaning service ${id}:`, error);
+            console.error('Error status:', error.response?.status);
+            console.error('Error data:', error.response?.data);
+            throw error;
+        }
+    }
+};

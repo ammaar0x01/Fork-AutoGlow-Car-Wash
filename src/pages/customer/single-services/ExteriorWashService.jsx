@@ -1,47 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import Navbar from '../../components/Navbar';
 import './ExteriorWashService.css';
 import Footer from '../../components/Footer';
-
 import waxing from '../../../assets/waxing.png';
 import tire from '../../../assets/image-3.png';
 import luxury from '../../../assets/luxury.png';
 import hero from '../../../assets/hero-carwash.jpg';
 import fleet from '../../../assets/fleet.png';
 
-// Custom hook to handle scroll-based animation
-const useScrollAnimation = () => {
-  const refs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    refs.current.forEach(ref => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      refs.current.forEach(ref => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
-
-  return refs;
-};
-
-function ExteriorWash() {
+export default function ExteriorWash() {
   const [activeIndex, setActiveIndex] = useState(null);
   const serviceRefs = useScrollAnimation();
   const faqRefs = useScrollAnimation();
@@ -181,4 +150,34 @@ function ExteriorWash() {
   );
 }
 
-export default ExteriorWash;
+// Custom hook to handle scroll-based animation
+const useScrollAnimation = () => {
+  const refs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    refs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      refs.current.forEach(ref => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
+  return refs;
+};

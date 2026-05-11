@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
+
 import "./VehiclePage.css";
 import NavbarCustomer from "../../components/NavbarCustomer";
 import Footer from "../../components/Footer";
 import "../../components/Footer.css";
-import { useNavigate, useLocation } from "react-router-dom";
 
 
-const VehiclePage = () => {
+export default function VehiclePage(){
   // ========================================
   // HOOKS & STATE
   // ========================================
@@ -1480,5 +1481,3 @@ const navigate = useNavigate();
         </div>
     );
 };
-
-export default VehiclePage;

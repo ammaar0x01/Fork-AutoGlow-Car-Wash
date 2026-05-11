@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
+
 import "./ConfirmBookingPage.css";
 
-function ConfirmBookingPage() {
+
+export default function ConfirmBookingPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -461,5 +463,3 @@ function ConfirmBookingPage() {
     </div>
   );
 }
-
-export default ConfirmBookingPage;

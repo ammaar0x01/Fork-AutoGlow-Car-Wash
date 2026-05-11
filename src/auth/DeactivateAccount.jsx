@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./DeactivateAccount.css";
 
-const DeactivateAccount = () => {
+
+export default function DeactivateAccount(){
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
 
@@ -130,5 +132,3 @@ const DeactivateAccount = () => {
     </div>
   );
 };
-
-export default DeactivateAccount;

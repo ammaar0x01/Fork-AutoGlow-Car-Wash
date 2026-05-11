@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"; // external CSS file
+
+import "./Login.css";
 import image1 from '../../assets/image-1.png';
 import image2 from '../../assets/image-2.png';
 import image3 from '../../assets/image-3.png';
 import interior from '../../assets/interior.png';
 
-const Login = () => {
+
+export default function Login() {
   const navigate = useNavigate();
   const [login, setLogin] = useState({ email: "", password: "" });
   const [showModal, setShowModal] = useState(false);
@@ -310,5 +312,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./Booking.css";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import { FaStar, FaTrash } from "react-icons/fa";
+
+import "./Booking.css";
 import NavbarCustomer from "../../components/NavbarCustomer";
 import Footer from "../../components/Footer";
 
-const Booking = () => {
+
+export default function Booking() {
   const categories = [
     "Exterior Wash",
     "Interior Care",
@@ -204,5 +206,3 @@ const Booking = () => {
     </>
   )
 }
-
-export default Booking;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+
 const styles = {
     pageContainer: {
         display: 'flex',
@@ -27,7 +28,7 @@ const styles = {
     },
 };
 
-const AddressDetails = () => {
+export default function AddressDetails() {
     const navigate = useNavigate();
     const location = useLocation();
     // Get manager data passed from ManagerForm
@@ -466,4 +467,3 @@ const AddressDetails = () => {
     );
 };
 
-export default AddressDetails;

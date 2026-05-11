@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+
 import NavbarCustomer from "../../components/NavbarCustomer";
 import Footer from "../../components/Footer";
 import "./BookingVehicle.css";
 
-const BookingVehicle = () => {
+
+export default function BookingVehicle() {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -239,5 +241,3 @@ const BookingVehicle = () => {
     </>
   );
 };
-
-export default BookingVehicle;

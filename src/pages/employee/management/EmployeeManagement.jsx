@@ -1,26 +1,14 @@
-// src/components/EmployeeManagement.js
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { employeeServiceSimple } from "../../services/employeeService";
+
+import { employeeServiceSimple } from "../../../services/employeeService";
 import "./EmployeeManagement.css";
 import NavbarEmployee from "./components/NavbarEmployee";
 import Footer from "./components/Footer";
 
-// Constants to avoid magic strings
-const EMPLOYEE_TYPES = {
-  MANAGER: "Manager",
-  ACCOUNTANT: "Accountant",
-  WASH_ATTENDANT: "Wash Attendant",
-};
 
-const SHIFT_TYPES = {
-  DAY: "DAY",
-  NIGHT: "NIGHT",
-  SWING: "SWING",
-};
-
-const EmployeeManagement = () => {
+export default function EmployeeManagement() {
   const [employees, setEmployees] = useState([]);
   const [filteredEmployees, setFilteredEmployees] = useState([]);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
@@ -335,6 +323,19 @@ const EmployeeManagement = () => {
       <Footer />
     </div>
   );
+};
+
+// Constants to avoid magic strings
+const EMPLOYEE_TYPES = {
+  MANAGER: "Manager",
+  ACCOUNTANT: "Accountant",
+  WASH_ATTENDANT: "Wash Attendant",
+};
+
+const SHIFT_TYPES = {
+  DAY: "DAY",
+  NIGHT: "NIGHT",
+  SWING: "SWING",
 };
 
 // Employee Form Component
@@ -999,5 +1000,3 @@ const EmployeeTable = ({ employees, onEdit, onRefresh }) => {
     </div>
   );
 };
-
-export default EmployeeManagement;

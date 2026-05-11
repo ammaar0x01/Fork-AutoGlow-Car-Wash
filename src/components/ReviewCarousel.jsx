@@ -6,52 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import butterfly from "../../assets/images/butterfly.png"; 
 import googleLogo from "../../assets/images/image.png";
 
-const reviews = [
-  {
-    name: "Lucy Smith",
-    date: "Sep 10, 2024",
-    location: "Cape Town",
-    rating: 5,
-    text: "Best booking system! So convenient having my car cleaned while at work.",
-  },
-  {
-    name: "James Johnson",
-    date: "Aug 22, 2024",
-    location: "Durban",
-    rating: 4,
-    text: "Quick, reliable, and convenient service. My car has never looked better!",
-  },
-  {
-    name: "Anele Moyo",
-    date: "Jul 30, 2024",
-    location: "Johannesburg",
-    rating: 5,
-    text: "Professional and always on time. Worth every penny!",
-  },
-  {
-    name: "Sarah Lee",
-    date: "Jun 15, 2024",
-    location: "Pretoria",
-    rating: 5,
-    text: "Excellent service and friendly staff. My car looks fantastic after every visit!",
-  },
-  {
-    name: "Michael Brown",
-    date: "May 12, 2024",
-    location: "Port Elizabeth",
-    rating: 4,
-    text: "Very efficient and trustworthy. Highly recommend their mobile cleaning service.",
-  },
-  {
-    name: "Nandi Khumalo",
-    date: "Apr 08, 2024",
-    location: "Bloemfontein",
-    rating: 5,
-    text: "Convenient and affordable. I love that they come to my office to clean my car.",
-  },
-];
 
-const ReviewCarousel = () => {
+export default function ReviewCarousel() {
   const settings = {
     dots: false,
     infinite: true,
@@ -122,4 +78,48 @@ const ReviewCarousel = () => {
   );
 };
 
-export default ReviewCarousel;
+
+const reviews = [
+  {
+    name: "Lucy Smith",
+    date: "Sep 10, 2024",
+    location: "Cape Town",
+    rating: 5,
+    text: "Best booking system! So convenient having my car cleaned while at work.",
+  },
+  {
+    name: "James Johnson",
+    date: "Aug 22, 2024",
+    location: "Durban",
+    rating: 4,
+    text: "Quick, reliable, and convenient service. My car has never looked better!",
+  },
+  {
+    name: "Anele Moyo",
+    date: "Jul 30, 2024",
+    location: "Johannesburg",
+    rating: 5,
+    text: "Professional and always on time. Worth every penny!",
+  },
+  {
+    name: "Sarah Lee",
+    date: "Jun 15, 2024",
+    location: "Pretoria",
+    rating: 5,
+    text: "Excellent service and friendly staff. My car looks fantastic after every visit!",
+  },
+  {
+    name: "Michael Brown",
+    date: "May 12, 2024",
+    location: "Port Elizabeth",
+    rating: 4,
+    text: "Very efficient and trustworthy. Highly recommend their mobile cleaning service.",
+  },
+  {
+    name: "Nandi Khumalo",
+    date: "Apr 08, 2024",
+    location: "Bloemfontein",
+    rating: 5,
+    text: "Convenient and affordable. I love that they come to my office to clean my car.",
+  },
+];

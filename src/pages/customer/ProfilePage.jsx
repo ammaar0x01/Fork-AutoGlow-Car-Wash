@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import './ProfilePage.css';
 
-const ProfilePage = () => {
+
+export default function ProfilePage() {
   const [client, setClient] = useState({
     userName: '',
     userSurname: '',
@@ -233,5 +235,3 @@ const ProfilePage = () => {
     </div>
   );
 };
-
-export default ProfilePage;

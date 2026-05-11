@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { customerService } from "../../services/customerService";
 
-const EditCustomerProfile = () => {
+
+export default function EditCustomerProfile() {
   const navigate = useNavigate();
   const [client, setClient] = useState({
     userName: "",
@@ -352,4 +354,3 @@ const styles = {
 styles.input[':focus'] = { borderColor: "#1d7a6e", boxShadow: "0 0 5px rgba(29,122,110,0.3)" };
 styles.saveBtn[':hover'] = { backgroundColor: "#155f55", transform: "translateY(-1px)" };
 
-export default EditCustomerProfile;

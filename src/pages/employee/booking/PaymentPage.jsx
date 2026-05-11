@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
 import "./PaymentPage.css";
 import NavbarEmployee from "../../../screens/components/NavbarEmployee";
 import Footer from "../../../screens/components/Footer";
 
-const PaymentPage = () => {
+
+export default function PaymentPage(){
   const { bookingId } = useParams();
   const navigate = useNavigate();
 
@@ -311,5 +313,3 @@ const PaymentPage = () => {
     </div>
   );
 };
-
-export default PaymentPage;

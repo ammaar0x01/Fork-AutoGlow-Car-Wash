@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+
 import NavbarCustomer from "../../components/NavbarCustomer";
 import Footer from "../../components/Footer";
 import "./BookingTwo.css";
 
-const BookingTwo = () => {
+
+export default function BookingTwo(){
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -354,5 +356,3 @@ const BookingTwo = () => {
     </>
   );
 };
-
-export default BookingTwo;
