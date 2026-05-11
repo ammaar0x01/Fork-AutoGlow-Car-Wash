@@ -204,7 +204,10 @@ export default function All() {
     const navigate = useNavigate();
 
     const handleNavigation = (path) => {
-        navigate(path);
+        // navigate(path);
+        // or 
+        window.open(path, "_blank");
+
         // setIsMenuOpen(false);
     };
 

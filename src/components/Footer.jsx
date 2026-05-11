@@ -1,8 +1,9 @@
 // components/Footer.js
 import React from "react";
+
 import "./Footer.css"; // optional if you want a separate CSS
-import facebookLogo from "../assets/facebook_logo.png";
-import instaLogo from "../assets/insta_logo.png";
+import facebookLogo from "../assets/icons/facebook_logo.png";
+import instaLogo from "../assets/icons/insta_logo.png";
 
 
 const Footer = () => {

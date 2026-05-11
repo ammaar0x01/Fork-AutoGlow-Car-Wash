@@ -2,8 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import butterfly from "../../assets/butterfly.png"; // Adjust path as needed
-import googleLogo from "../../assets/image.png";
+
+import butterfly from "../../assets/images/butterfly.png"; 
+import googleLogo from "../../assets/images/image.png";
 
 const reviews = [
   {

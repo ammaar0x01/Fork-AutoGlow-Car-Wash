@@ -22,6 +22,8 @@ Todo
 - use mongo/supabase 
 - rename all jsx files to have .jsx extension      
 - use tailwindStyles to defines common styles 
+- remove some images (too many) 
+- convert images to webp 
 -      
 ---
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import "./home.css";
+import "./Home.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -9,6 +9,7 @@ import Footer from "../../components/Footer";
 // import butterfly from `${BASE_URL}suv.png`;
 
 import butterfly from "../../assets/images/cars/home/suv.png";
+import mission from "../../assets/images/cars/home/mission-bg.jpg";
 
 // import butterfly from "../assets/suv.png";
 // import POLISH_IMAGE from "../assets/polish.png";
@@ -24,6 +25,8 @@ import butterfly from "../../assets/images/cars/home/suv.png";
 
 
 export default function Home() {
+    document.title = "Home" 
+
     const categories = [
         {
             title: "Full Wash",
@@ -94,7 +97,7 @@ export default function Home() {
                     <div className="service-card-grid app-content">
                         <div
                             className="service-card with-bg"
-                            // style={{ backgroundImage: `url(${butterfly})` }}
+                            style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Exterior Wash</h3>
@@ -112,7 +115,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            // style={{ backgroundImage: `url(${butterfly})` }}
+                            style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Interior Care</h3>
@@ -130,7 +133,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            // style={{ backgroundImage: `url(${butterfly})` }}
+                            style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Full Detailing</h3>
@@ -148,7 +151,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            // style={{ backgroundImage: `url(${butterfly})` }}
+                            style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Protection Services</h3>
@@ -199,7 +202,7 @@ export default function Home() {
 
             {/* Mission Section with Zoom Effect */}
             <ZoomSection
-                // image={MISSION_IMAGE}
+                image={mission}
                 title="Our Mission"
                 content={
                     <div className="mission-content">

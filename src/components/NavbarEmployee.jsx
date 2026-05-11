@@ -1,8 +1,9 @@
 // src/screens/components/NavbarEmployee.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./NavbarEmployee.css"; // Keep separate CSS for styling
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/iconslogo.jpg";
 
 const NavbarEmployee = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

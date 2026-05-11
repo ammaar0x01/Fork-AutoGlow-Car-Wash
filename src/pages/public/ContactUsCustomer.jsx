@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import emailjs from 'emailjs-com';
 import './ContactUs.css';
 
-const ContactUsCustomer = () => {
+
+export default function ContactUsCustomer(){
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -284,5 +286,3 @@ const ContactUsCustomer = () => {
         </div>
     );
 };
-
-export default ContactUsCustomer;
