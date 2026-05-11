@@ -69,20 +69,20 @@
 //         {/* --- Unauth route? */}
 
 //         {/* --- Customer */}
-//         {/* <Route path="/LandingCustomer" element={<LandingCustomer />} /> */}
-//         <Route path="/customer/home" element={<LandingCustomer />} />  {/* remove this? or mod it? */}
+        // {/* <Route path="/LandingCustomer" element={<LandingCustomer />} /> */}
+        // <Route path="/customer/home" element={<LandingCustomer />} />  {/* remove this? or mod it? */}
 
-//         <Route path="/vehicles" element={<VehiclePage />} />
-//         <Route path="/profiles" element={<ProfilePage />} />
-//         <Route path="/booking" element={<Booking />} />
-//         <Route path="/bookingtwo" element={<BookingTwo />} />
-//         <Route path="/bookingvehicle" element={<BookingVehicle />} /> {/* Vehicle selection */}
-//         <Route path="/confirm" element={<ConfirmBookingPage />} />
-//         <Route path="/payment/:bookingId" element={<PaymentPage />} />
-//         <Route path="/EditCustomerProfile" element={<EditCustomerProfile />} />
-//         <Route path="/password-reset" element={<PasswordReset />} />
-//         <Route path="/deactivate-account" element={<DeactivateAccount />} />
-//         <Route path="/bookinghistory" element={<BookingHistory />} />
+        // <Route path="/vehicles" element={<VehiclePage />} />
+        // <Route path="/profiles" element={<ProfilePage />} />
+        // <Route path="/booking" element={<Booking />} />
+        // <Route path="/bookingtwo" element={<BookingTwo />} />
+        // <Route path="/bookingvehicle" element={<BookingVehicle />} /> {/* Vehicle selection */}
+        // <Route path="/confirm" element={<ConfirmBookingPage />} />
+        // <Route path="/payment/:bookingId" element={<PaymentPage />} />
+        // <Route path="/EditCustomerProfile" element={<EditCustomerProfile />} />
+        // <Route path="/password-reset" element={<PasswordReset />} />
+        // <Route path="/deactivate-account" element={<DeactivateAccount />} />
+        // <Route path="/bookinghistory" element={<BookingHistory />} />
 
 //         {/* --- Employee / Business */}
 //         {/* <Route path="/LandingEmployee" element={<LandingEmployee />} /> */}

@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // --- Pages --- 
-import All from "./pages/_temp/All";
-
+// --- public --- 
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import ContactUs from "./pages/public/ContactUs";
@@ -15,6 +14,15 @@ import FullDetailing from "./pages/public/services/FullDetailing";
 import ProtectionService from "./pages/public/services/ProtectionService";
 import RoleSelection from "./pages/public/RoleSelection";
 import AddressDetails from "./pages/public/AddressDetails";
+
+// --- customer --- 
+// ...
+
+// --- business/manager --- 
+// ...
+
+// --- other ---
+import All from "./pages/_temp/All";
 
 
 export default function App() {
@@ -47,8 +55,25 @@ export default function App() {
         {/* --- Unauth route? */}
 
         {/* --- Customer */}
-        
+        {/* <Route path="/customer/home" element={<LandingCustomer />} />  */}
+
+{/* 
+        <Route path="/vehicles" element={<VehiclePage />} />
+        <Route path="/profiles" element={<ProfilePage />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/bookingtwo" element={<BookingTwo />} />
+        <Route path="/bookingvehicle" element={<BookingVehicle />} /> 
+        <Route path="/confirm" element={<ConfirmBookingPage />} />
+        <Route path="/payment/:bookingId" element={<PaymentPage />} />
+        <Route path="/EditCustomerProfile" element={<EditCustomerProfile />} />
+        <Route path="/password-reset" element={<PasswordReset />} />
+        <Route path="/deactivate-account" element={<DeactivateAccount />} />
+        <Route path="/bookinghistory" element={<BookingHistory />} /> */}
+         
+
         {/* --- Employee / Business */}
+        {/* <Route path="/employee/home" element={< />} />  */}
+        {/* <Route path="/business/home" element={< />} />  */}
 
 
         {/* --- Less important / Testing */}
