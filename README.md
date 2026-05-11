@@ -3,11 +3,11 @@
 - Started:  2025-05-xx
 - Updated:  2026-05-11
 - Version:  1.0
+- Status: work-in-progress
 - Developers 
     + PrincessUgbobuaku
     + ammaar0x01
     
-- Status: work-in-progress
 
 ## More info
 Welcome to the Mobile Car Wash application repository! This project is designed to provide users with the convenience of having their cars washed at their desired location through a seamless mobile app experience.
