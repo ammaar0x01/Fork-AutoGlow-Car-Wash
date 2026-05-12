@@ -1,79 +1,9 @@
 import React from "react";
 
-// import "./Footer.css"; 
 import facebookLogo from "../assets/icons/facebook_logo.png";
 import instaLogo from "../assets/icons/insta_logo.png";
 
 
-// export default function Footer(){
-//     return (
-//         <footer className="footer">
-//             <div className="footer-container">
-//                 <div className="footer-section">
-//                     <h3 className="footer-heading">Mobile Car Wash</h3>
-//                     <p className="footer-text">Professional mobile car cleaning services at your doorstep.</p>
-//                 </div>
-
-//                 <div className="footer-section">
-//                     <h4 className="footer-subheading">For Customers</h4>
-//                     <ul className="footer-links">
-//                         <li><a href="/login">Log in or sign up</a></li>
-//                         <li><a href="/download">Download the app</a></li>
-//                         <li><a href="/help">Help and support</a></li>
-//                     </ul>
-//                 </div>
-
-//                 <div className="footer-section">
-//                     <h4 className="footer-subheading">For Businesses</h4>
-//                     <ul className="footer-links">
-//                         <li><a href="/business">List your business</a></li>
-//                         <li><a href="/partnership">Partnership opportunities</a></li>
-//                     </ul>
-//                 </div>
-
-//                 <div className="footer-section">
-//                     <h4 className="footer-subheading">Connect With Us</h4>
-//                     <div className="social-icons">
-//                         <a
-//                             href="https://facebook.com"
-//                             target="_blank"
-//                             rel="noopener noreferrer"
-//                         >
-//                             <img
-//                                 src={facebookLogo}
-//                                 alt="Facebook"
-//                                 className="social-icon"
-//                             />
-//                         </a>
-//                         <a
-//                             href="https://www.instagram.com/mobile_glow_carwash?igsh=MWZleHdvbGliOWF4cA%3D%3D&utm_source=qr"
-//                             target="_blank"
-//                             rel="noopener noreferrer"
-//                         >
-//                             <img
-//                                 src={instaLogo}
-//                                 alt="Instagram"
-//                                 className="social-icon"
-//                             />
-//                         </a>
-//                     </div>
-//                 </div>
-//             </div>
-
-//             <div className="footer-bottom">
-//                 <p>© {new Date().getFullYear()} Mobile Car Wash. All rights reserved.</p>
-//                 <div className="legal-links">
-//                     <a href="/privacy">Privacy Policy</a>
-//                     <a href="/terms">Terms of Service</a>
-//                     <a href="/cookies">Cookie Policy</a>
-//                 </div>
-//             </div>
-//         </footer>
-//     );
-// };
-
-
-// newer 
 export default function Footer() {
     return (
         <footer className="bg-[rgba(12,45,72,1)] text-gray-300 py-12 px-6">
@@ -143,11 +73,11 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                     <p>© {new Date().getFullYear()} Mobile Car Wash. All rights reserved.</p>
-                    <div className="flex gap-6">
+                    {/* <div className="flex gap-6">
                         <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
                         <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

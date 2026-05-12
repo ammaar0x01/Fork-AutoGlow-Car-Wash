@@ -1,21 +1,30 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import Navbar from '../../../components/Navbar';
-import './ExteriorWashService.css';
-import Footer from '../../../components/Footer';
+// import './ExteriorWashService.css';
 
-import waxing from '../../../assets/waxing.png';
-import tire from '../../../assets/image-3.png';
-import luxury from '../../../assets/luxury.png';
-import hero from '../../../assets/hero-carwash.jpg';
-import fleet from '../../../assets/fleet.png';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
+import useScrollAnimation from "../../../hooks/useScrollAnimation"
+
+import waxing from '../../../assets/images/cars/services/waxing.png';
+import tire from '../../../assets/images/cars/services/image-3.png';
+import luxury from '../../../assets/images/cars/services/luxury.png';
+import hero from '../../../assets/images/cars/services/hero-carwash.jpg';
+import fleet from '../../../assets/images/cars/services/fleet.png';
+
+// import waxing from '../../../assets/waxing.png';
+// import tire from '../../../assets/image-3.png';
+// import luxury from '../../../assets/luxury.png';
+// import hero from '../../../assets/hero-carwash.jpg';
+// import fleet from '../../../assets/fleet.png';
+
 
 
 
 export default function ExteriorWashService() {
   const [activeIndex, setActiveIndex] = useState(null);
   const serviceRefs = useScrollAnimation();
-  const faqRefs = useScrollAnimation();
+  const faqRefs = useScrollAnimation()
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -153,33 +162,33 @@ export default function ExteriorWashService() {
 }
 
 // Custom hook to handle scroll-based animation
-const useScrollAnimation = () => {
-  const refs = useRef([]);
+// const useScrollAnimation = () => {
+//   const refs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       entries => {
+//         entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add('visible');
+//           }
+//         });
+//       },
+//       {
+//         threshold: 0.1,
+//       }
+//     );
 
-    refs.current.forEach(ref => {
-      if (ref) observer.observe(ref);
-    });
+//     refs.current.forEach(ref => {
+//       if (ref) observer.observe(ref);
+//     });
 
-    return () => {
-      refs.current.forEach(ref => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
+//     return () => {
+//       refs.current.forEach(ref => {
+//         if (ref) observer.unobserve(ref);
+//       });
+//     };
+//   }, []);
 
-  return refs;
-};
+//   return refs;
+// };

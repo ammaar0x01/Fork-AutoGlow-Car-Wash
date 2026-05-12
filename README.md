@@ -2,7 +2,7 @@
 - About:    A webapp using react for a car-wash service 
 - Started:  2025-05-dd
 - Updated:  2026-05-12
-- Version:  0.1
+- Version:  0.2
 - Status: work-in-progress
 - Developers 
     + PrincessUgbobuaku

@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import Navbar from '../../../components/Navbar';
-import './ExteriorWashService.css';
-import Footer from '../../../components/Footer';
+// import './ExteriorWashService.css';
 
-import hero from '../../../assets/hero-carwash.jpg';
-import vacuum from '../../../assets/vacuum.png';
-import leather from '../../../assets/leather.png';
-import dashboard from '../../../assets/dashboard.png';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
+import useScrollAnimation from "../../../hooks/useScrollAnimation"
+
+import hero from '../../../assets/images/cars/services/hero-carwash.jpg';
+import vacuum from '../../../assets/images/cars/services/vacuum.png';
+import leather from '../../../assets/images/cars/services/leather.png';
+import dashboard from '../../../assets/images/cars/services/dashboard.png';
 
 
 export default function InteriorCare() {
@@ -146,33 +148,33 @@ export default function InteriorCare() {
 
 
 // Custom hook to handle scroll-based animation
-const useScrollAnimation = () => {
-    const refs = useRef([]);
+// const useScrollAnimation = () => {
+//     const refs = useRef([]);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-            }
-        );
+//     useEffect(() => {
+//         const observer = new IntersectionObserver(
+//             entries => {
+//                 entries.forEach(entry => {
+//                     if (entry.isIntersecting) {
+//                         entry.target.classList.add('visible');
+//                     }
+//                 });
+//             },
+//             {
+//                 threshold: 0.1,
+//             }
+//         );
 
-        refs.current.forEach(ref => {
-            if (ref) observer.observe(ref);
-        });
+//         refs.current.forEach(ref => {
+//             if (ref) observer.observe(ref);
+//         });
 
-        return () => {
-            refs.current.forEach(ref => {
-                if (ref) observer.unobserve(ref);
-            });
-        };
-    }, []);
+//         return () => {
+//             refs.current.forEach(ref => {
+//                 if (ref) observer.unobserve(ref);
+//             });
+//         };
+//     }, []);
 
-    return refs;
-};
+//     return refs;
+// };

@@ -4,7 +4,7 @@ import './AboutUs.css';
 // import './components/Footer';
 // import './components/NavBar';
 
-const AboutUsCustomer = () => {
+export default function AboutUsCustomer(){
     const [visibleSections, setVisibleSections] = useState({});
     const [activeValue, setActiveValue] = useState(null);
     const navigate = useNavigate();
@@ -197,4 +197,3 @@ const AboutUsCustomer = () => {
     );
 };
 
-export default AboutUsCustomer;

@@ -6,14 +6,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import ContactUs from "./pages/public/ContactUs";
-import Login from "./pages/public/Login";
-import SignUp from "./pages/public/SignUp";
+import Services from "./pages/public/Services";
 import ExteriorWash from "./pages/public/services/ExteriorWashService";
 import InteriorCare from "./pages/public/services/InteriorCare";
 import FullDetailing from "./pages/public/services/FullDetailing";
 import ProtectionService from "./pages/public/services/ProtectionService";
+// 
+import Login from "./pages/public/Login";
+import SignUp from "./pages/public/SignUp";
 import RoleSelection from "./pages/public/RoleSelection";
 import AddressDetails from "./pages/public/AddressDetails";
+import PasswordReset from "./pages/other/PasswordReset";
+import DeactivateAccount from "./pages/public/DeactivateAccount";
 
 // --- customer --- 
 // ...
@@ -23,8 +27,7 @@ import AddressDetails from "./pages/public/AddressDetails";
 
 // --- other ---
 import All from "./pages/_temp/All";
-import Services from "./pages/public/Services";
-import PasswordReset from "./pages/other/PasswordReset";
+
 
 
 export default function App() {
@@ -38,6 +41,8 @@ export default function App() {
         
         {/* +++ Services */}
         <Route path="/services" element={<Services />} />
+
+        {/* <Route path="/services/exterior" element={<Services />} /> */}
         <Route path="/exterior" element={<ExteriorWash />} />
         <Route path="/interior" element={<InteriorCare />} />
         <Route path="/full-detailing" element={<FullDetailing />} />
@@ -50,6 +55,7 @@ export default function App() {
         <Route path="/create-account" element={<SignUp />} />
         <Route path="/role" element={<RoleSelection />} />
         <Route path="/address" element={<AddressDetails />} />
+        <Route path="/deactivate-account" element={<DeactivateAccount />} />
 
         
  
@@ -59,6 +65,8 @@ export default function App() {
 
         {/* --- Customer */}
         {/* <Route path="/customer/home" element={<LandingCustomer />} />  */}
+        {/* <Route path="/customer/exterir-account" element={<DeactivateAccount />} /> */}
+
 
 {/* 
         <Route path="/vehicles" element={<VehiclePage />} />

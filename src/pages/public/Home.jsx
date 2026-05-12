@@ -3,13 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
-// Import images from src folder
-// const BASE_URL = "../../assets/images/cars/home/"
-// import butterfly from `${BASE_URL}suv.png`;
-
-// import butterfly from "../../assets/images/cars/home/suv.png";
-// import mission from "../../assets/images/cars/home/mission-bg.jpg";
+import ReviewCarousel from "../../components/ReviewCarousel";
 
 import butterfly from "../../assets/images/cars/home/suv.png";
 import POLISH_IMAGE from "../../assets/images/cars/home/polish.png";
@@ -21,21 +15,6 @@ import INTERIOR_IMAGE from "../../assets/images/cars/home/interior.png";
 import HERO_IMAGE from "../../assets/images/cars/home/hero-carwash.jpg";
 import ABOUT_IMAGE from "../../assets/images/cars/home/about-us.png"; 
 import MISSION_IMAGE from "../../assets/images/cars/home/mission-bg.jpg"; 
-
-import ReviewCarousel from "../../components/ReviewCarousel";
-
-
-// import butterfly from "../assets/suv.png";
-// import POLISH_IMAGE from "../assets/polish.png";
-// import FULL_WASH_IMAGE from "../assets/full-wash.png";
-// import DETAILING_IMAGE from "../assets/detailing.png";
-// import ENGINE_IMAGE from "../assets/engine-wash.jpg";
-// import WAXING_IMAGE from "../assets/waxing.png";
-// import INTERIOR_IMAGE from "../assets/interior.png";
-// import HERO_IMAGE from "../assets/hero-carwash.jpg";
-// import ABOUT_IMAGE from "../assets/about-us.png"; // Add your about image
-// import MISSION_IMAGE from "../assets/mission-bg.jpg"; // Add your mission image
-// import ReviewCarousel from "./components/ReviewCarousel";
 
 
 export default function Home() {
@@ -157,7 +136,7 @@ export default function Home() {
 
                  <div className="book-now-container">
                         <button
-                            onClick={() => (window.location.href = "/login")}
+                            onClick={() => (window.location.href = "/services")}
                             className="cta-button primary"
                         >
                             View all our services

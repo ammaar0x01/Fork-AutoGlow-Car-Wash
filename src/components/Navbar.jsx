@@ -14,11 +14,6 @@ export default function Navbar() {
         setIsMenuOpen(false);
     };
 
-    // const handleAboutUs = () => { navigate("/AboutUs"); setIsMenuOpen(false); };
-    // const handleContactUs = () => { navigate("/ContactUs"); setIsMenuOpen(false); };
-    // const handleSignUp = () => navigate("/roleselection");
-    // const handleLogIn = () => navigate("/login");
-
     const handleServices = () => {
         const section = document.getElementById("our-services");
         if (section) {
@@ -27,8 +22,6 @@ export default function Navbar() {
     };
 
     
-    // Shared Tailwind class for Desktop Nav Buttons
-    // const navBtnClass = "text-white font-bold text-base px-3 py-2 transition-all duration-300 hover:bg-gray-200 hover:text-black rounded";
     const navBtnClass = "text-white/90 font-normal text-sm tracking-wide px-4 py-2 transition-all duration-300 hover:text-white hover:bg-white/10 rounded-full";
 
     return (
@@ -36,9 +29,6 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
                 
                 {/* Left side: Logo */}
-                {/* <div className="flex items-center cursor-pointer" onClick={() => navigate("/")}>
-                    <img src={logo} alt="Logo" className="h-16 w-auto rounded-full mr-2" />
-                </div> */}
                  <div className="flex items-center cursor-pointer group" onClick={() => navigate("/")}>
                     <img src={logo} alt="Logo" className="h-12 w-auto rounded-full mr-3 border border-white/20 group-hover:scale-105 transition-transform" />
                     <span className="text-white font-light tracking-widest text-lg uppercase hidden sm:block">MobileGlow</span>
@@ -46,15 +36,6 @@ export default function Navbar() {
 
 
                 {/* Right side: Desktop Links */}
-                {/* <div className="hidden md:flex items-center gap-4">
-                    <button className={navBtnClass} onClick={handleServices}>Our Services</button>
-                    <button className={navBtnClass} onClick={handleAboutUs}>About</button>
-                    <button className={navBtnClass} onClick={handleContactUs}>Contact</button>
-                    <button className={navBtnClass} onClick={handleSignUp}>Sign Up</button>
-                    <button className={navBtnClass} onClick={handleLogIn}>Log In</button>
-                </div> */}
-
-                 {/* <div className="hidden lg:flex items-center gap-2"> */}
                 <div className="hidden md:flex items-center gap-4">
                     <button className={navBtnClass} onClick={() => handleNavigation("/about")}>About</button>                
                     <button className={navBtnClass} onClick={() => handleNavigation("/services")}>Services</button>
@@ -64,7 +45,7 @@ export default function Navbar() {
                     <button className={navBtnClass} 
                         onClick={() => handleNavigation("/login")}>Log In</button>
                     <button className="bg-blue-500 hover:bg-blue-600 text-white font-normal text-sm px-6 py-2 rounded-full transition-all shadow-lg shadow-blue-500/20" 
-                        onClick={() => handleNavigation("/roles")}>
+                        onClick={() => handleNavigation("/role")}>
                         Sign Up
                     </button>
                 </div>
@@ -84,6 +65,7 @@ export default function Navbar() {
             {/* Mobile Slide-In Side Menu */}
             {/* bg-[#0C2D48]  */}
             {/* <div className={`fixed top-0 right-0 h-full w-[250px] bg-[rgba(12,45,72,0.9)] */}
+            
             <div className={`fixed top-0 right-0 h-full w-[250px] bg-[rgba(12,45,72,0.9)]
 backdrop-blur-sm p-6 rounded-xl
                     shadow-2xl pt-24 transition-transform duration-300 ease-in-out z-[1000] 
@@ -112,7 +94,7 @@ backdrop-blur-sm p-6 rounded-xl
                     </li>
                     <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
-                            onClick={() => handleNavigation("/roles")}>Sign Up</button>
+                            onClick={() => handleNavigation("/role")}>Sign Up</button>
                     </li>
                     <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 

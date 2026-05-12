@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import image1 from '../../assets/image-1.png';
+
+import image1 from '../../assets/images/cars/login/image-1.png';
 import './RoleSelection.css';
 
 
@@ -9,7 +10,9 @@ export default function RoleSelection({ onBack }) {
 
     const handleSelectRole = (role) => {
         // Navigate to SignUp and pass role as state
-        navigate('/signup', { state: { role } });
+        // navigate('/signup', { state: { role } });
+        navigate('/create-account', { state: { role } });
+
     };
 
     return (

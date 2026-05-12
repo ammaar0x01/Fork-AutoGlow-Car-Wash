@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./Login.css"; // external CSS file
-import image1 from '../../assets/image-1.png';
-import image2 from '../../assets/image-2.png';
-import image3 from '../../assets/image-3.png';
-import interior from '../../assets/interior.png';
+import "./Login.css"; 
 
-const Login = () => {
+import image1 from '../../assets/images/cars/login/image-1.png';
+import image2 from '../../assets/images/cars/login/image-2.png';
+import image3 from '../../assets/images/cars/login/image-3.png';
+import interior from '../../assets/images/cars/login/interior.png';
+
+// import image1 from '../../assets/image-1.png';
+// import image2 from '../../assets/image-2.png';
+// import image3 from '../../assets/image-3.png';
+// import interior from '../../assets/interior.png';
+
+export default function Login() {
+  document.title = "Login"
+  
   const navigate = useNavigate();
   const [login, setLogin] = useState({ email: "", password: "" });
   const [showModal, setShowModal] = useState(false);
@@ -246,7 +254,7 @@ const Login = () => {
       {/* Right Section */}
       <div className="login-section">
         <form onSubmit={handleSubmit} className="login-form">
-          <h2>Sign In</h2>
+          <h2>Log In</h2>
           <p>Enter your account details to continue</p>
 
           <div className="form-group">
@@ -312,4 +320,3 @@ const Login = () => {
   );
 };
 
-export default Login;
