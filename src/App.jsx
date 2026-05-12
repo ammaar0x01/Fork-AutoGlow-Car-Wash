@@ -24,6 +24,7 @@ import AddressDetails from "./pages/public/AddressDetails";
 // --- other ---
 import All from "./pages/_temp/All";
 import Services from "./pages/public/Services";
+import PasswordReset from "./pages/other/PasswordReset";
 
 
 export default function App() {
@@ -80,6 +81,8 @@ export default function App() {
 
         {/* --- Less important / Testing */}
         <Route path="/temp/all" element={<All />} />
+        <Route path="/temp/password" element={<PasswordReset />} />
+        <Route path="/password-reset" element={<PasswordReset />} />
 
       </Routes>
     </Router>

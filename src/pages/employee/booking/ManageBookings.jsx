@@ -6,7 +6,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 import NavbarEmployee from "../../../screens/components/NavbarEmployee";
 import Footer from "../../components/Footer";
-import "../../components/Footer.css";
+// import "../../components/Footer.css";
 import "./ManageBookings.css";
 
 

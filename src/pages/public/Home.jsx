@@ -104,86 +104,78 @@ export default function Home() {
             </section>
 
             {/* Our services */}
-            <div className="business-services">
-                <div className="service-card-background-container">
-                    <h1 className="business-section-heading">Business Services</h1>
+            <section className="bg-gray-50 py-12 px-4 min-h-[500px]">
+                <div className="max-w-6xl mx-auto">
+                    {/* Optional Heading: <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">Business Services</h1> */}
 
-                    <div className="service-card-grid app-content">
-                        <div
-                            className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
-                        >
-                            <div className="card-overlay">
-                                <h3>Exterior Wash</h3>
-                                <p>
-                                    Keep your business fleet spotless and professional-looking
-                                    with our bulk cleaning service.
-                                </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                        {/* Service Card Component - repeated for each service */}
+                        {[
+                            {
+                                title: "Exterior Wash",
+                                desc: "Keep your business fleet spotless and professional-looking with our bulk cleaning service.",
+                                link: "/exterior-wash"
+                            },
+                            {
+                                title: "Interior Care",
+                                desc: "Offer your employees a sparkling perk with our customizable corporate wash plans.",
+                                link: "/corporate-packages"
+                            },
+                            {
+                                title: "Full Detailing",
+                                desc: "Partner with us to offer our mobile services at your location and share in the shine.",
+                                link: "/partner-with-us"
+                            },
+                            {
+                                title: "Protection Services",
+                                desc: "Looking to start your own car wash business? Explore our franchise options today.",
+                                link: "/franchise"
+                            }
+                        ].map((service, index) => (
+                            <div
+                                key={index}
+                                className="relative overflow-hidden rounded-xl bg-white shadow-md border border-gray-100 p-6 flex flex-col transition-transform hover:scale-[1.02]"
+                            >
+                                <div className="flex-grow">
+                                    <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                                        {service.desc}
+                                    </p>
+                                </div>
                                 <button
-                                    onClick={() => (window.location.href = "/exterior-wash")}
-                                >
-                                    Learn more
-                                </button>
-                            </div>
-                        </div>
-
-                        <div
-                            className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
-                        >
-                            <div className="card-overlay">
-                                <h3>Interior Care</h3>
-                                <p>
-                                    Offer your employees a sparkling perk with our customizable
-                                    corporate wash plans.
-                                </p>
-                                <button
-                                    onClick={() => (window.location.href = "/corporate-packages")}
-                                >
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
-
-                        <div
-                            className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
-                        >
-                            <div className="card-overlay">
-                                <h3>Full Detailing</h3>
-                                <p>
-                                    Partner with us to offer our mobile services at your location
-                                    and share in the shine.
-                                </p>
-                                <button
-                                    onClick={() => (window.location.href = "/partner-with-us")}
+                                    className="w-full bg-blue-800 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-colors duration-200"
+                                    onClick={() => (window.location.href = service.link)}
                                 >
                                     Learn More
                                 </button>
                             </div>
-                        </div>
-
-                        <div
-                            className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
-                        >
-                            <div className="card-overlay">
-                                <h3>Protection Services</h3>
-                                <p>
-                                    Looking to start your own car wash business? Explore our
-                                    franchise options today.
-                                </p>
-                                <button onClick={() => (window.location.href = "/franchise")}>
-                                    Learn More
-                                </button>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-            </div>
+
+                 <div className="book-now-container">
+                        <button
+                            onClick={() => (window.location.href = "/login")}
+                            className="cta-button primary"
+                        >
+                            View all our services
+                        </button>
+                    </div>
+
+                     <div className="book-now-container">
+                        <button
+                            onClick={() => (window.location.href = "/login")}
+                            className="cta-button primary"
+                        >
+                            Book now
+                        </button>
+                    </div>
+            </section>
 
             {/* stats banner */}
-            <section className="stats-banner">
+            <section className="stats-banner bg-blue-900">
                 <div className="stats-container">
                     <div className="stat">
                         <CountUp end={1000} start={990} duration={2000} />
@@ -231,38 +223,8 @@ export default function Home() {
                 isRight={true}
             />
 
-            {/* Categories Section - UPDATED WITH NAVY BACKGROUND */}
-            <section id="our-services" className="categories-section">
-                <div className="section-container">
-                    <h1 className="section-heading">Our Services</h1>
-                    <p className="section-subheading">
-                        Professional car care services delivered to your doorstep at your convenience
-                    </p>
-                    <div className="categories-grid">
-                        {categories.map((c, i) => (
-                            <CategoryCard
-                                key={i}
-                                title={c.title}
-                                description={c.description}
-                                imageUrl={c.imageUrl}
-                            />
-                        ))}
-                    </div>
-                    <div className="book-now-container">
-                        <button
-                            onClick={() => (window.location.href = "/login")}
-                            className="cta-button primary"
-                        >
-                            BOOK NOW
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <div>
-                <h2 className="carousel-heading"></h2>
                 <ReviewCarousel />
-            </div>
+           
 
             {/* Loyalty Section */}
             <section className="loyalty-section">

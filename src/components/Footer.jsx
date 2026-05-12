@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Footer.css"; 
+// import "./Footer.css"; 
 import facebookLogo from "../assets/icons/facebook_logo.png";
 import instaLogo from "../assets/icons/insta_logo.png";
 

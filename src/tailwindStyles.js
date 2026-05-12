@@ -1,4 +1,9 @@
 
+const mainColors = {
+    bg1: "bg-[#0C2D48]", 
+    bg2: ""
+}
+
 const buttonStyles = {
     button1: `rounded-full bg-black text-white p-3`,
     button2: `rounded-full text-light text-white bg-purple-900 p-3`,

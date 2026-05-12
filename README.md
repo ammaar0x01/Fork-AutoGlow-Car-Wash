@@ -1,8 +1,8 @@
 # MobileGlow | Cleen Masheens | Kleen 'n Sheen
 - About:    A webapp using react for a car-wash service 
-- Started:  2025-05-xx
-- Updated:  2026-05-11
-- Version:  1.0
+- Started:  2025-05-dd
+- Updated:  2026-05-12
+- Version:  0.1
 - Status: work-in-progress
 - Developers 
     + PrincessUgbobuaku

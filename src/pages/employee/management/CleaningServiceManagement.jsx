@@ -5,7 +5,7 @@ import { apiClient } from '../../../services/api';
 import './CleaningServiceManagement.css';
 import NavbarEmployee from "../../components/NavbarEmployee";
 import Footer from '../../components/Footer';
-import '../../components/Footer.css';
+// import '../../components/Footer.css';
 
 
 export default function CleaningServiceManagement(){

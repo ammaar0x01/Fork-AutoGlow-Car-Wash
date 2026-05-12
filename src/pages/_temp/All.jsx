@@ -61,10 +61,10 @@ export default function All() {
             className={` h-full w-full bg-[#0C2D48] 
               shadow-2xl pt-24 pb-24 transition-transform duration-300 ease-in-out z-[1000]
               `}>
-            {/* <NavbarTemplate /> */}
+            <NavbarTemplate />
             {/* <Navbar /> */}
-            <NavbarCustomer />
-            <NavbarEmployee />
+            {/* <NavbarCustomer /> */}
+            {/* <NavbarEmployee /> */}
 
             <ul className="flex flex-col bg-black m-7">
                 {menuItems.map((item, index) => (

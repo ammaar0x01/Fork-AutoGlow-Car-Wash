@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./NavbarCustomer.css";
+// import "./NavbarCustomer.css";
 import logo from "../assets/icons/logo.jpg";
 import NavbarTemplate from "./NavbarTemplate";
 import Navbar from "./Navbar";
