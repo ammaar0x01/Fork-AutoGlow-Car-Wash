@@ -57,7 +57,7 @@ export default function Navbar() {
                  {/* <div className="hidden lg:flex items-center gap-2"> */}
                 <div className="hidden md:flex items-center gap-4">
                     <button className={navBtnClass} onClick={() => handleNavigation("/about")}>About</button>                
-                    <button className={navBtnClass} onClick={handleServices}>Services</button>
+                    <button className={navBtnClass} onClick={() => handleNavigation("/services")}>Services</button>
                     <button className={navBtnClass} onClick={() => handleNavigation("/contact")}>Contact</button>
                     <div className="h-6 w-[1px] bg-white/20 mx-2"></div> {/* Separator */}
                     
@@ -82,9 +82,17 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Slide-In Side Menu */}
-            <div className={`fixed top-0 right-0 h-full w-[250px] bg-[#0C2D48] shadow-2xl pt-24 transition-transform duration-300 ease-in-out z-[1000] ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+            {/* bg-[#0C2D48]  */}
+            {/* <div className={`fixed top-0 right-0 h-full w-[250px] bg-[rgba(12,45,72,0.9)] */}
+            <div className={`fixed top-0 right-0 h-full w-[250px] bg-[rgba(12,45,72,0.9)]
+backdrop-blur-sm p-6 rounded-xl
+                    shadow-2xl pt-24 transition-transform duration-300 ease-in-out z-[1000] 
+                    ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+                    >
                 <ul className="flex flex-col">
-                    <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors">
+                    {/* <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors"> */}
+                    <li className="hover:bg-gray-100 group transition-colors">
+
                         {/* <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" onClick={handleAboutUs}>About Us</button> */}
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
                             onClick={() => handleNavigation("/about")}>
@@ -92,19 +100,21 @@ export default function Navbar() {
                         </button>
 
                     </li>
-                    <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors">
+                    <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
-                            onClick={handleServices}>Our Services</button>
+                        onClick={() => handleNavigation("/services")}>
+                            {/* onClick={handleServices}> */}
+                                Our Services</button>
                     </li>
-                    <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors">
+                    <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
                             onClick={() => handleNavigation("/contact")}>Contact Us</button>
                     </li>
-                    <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors">
+                    <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
                             onClick={() => handleNavigation("/roles")}>Sign Up</button>
                     </li>
-                    <li className="border-b border-gray-700 hover:bg-gray-100 group transition-colors">
+                    <li className="hover:bg-gray-100 group transition-colors">
                         <button className="w-full text-left px-6 py-4 text-white font-medium group-hover:text-black" 
                             onClick={() => handleNavigation("/login")}>Log In</button>
                     </li>

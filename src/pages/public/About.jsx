@@ -40,7 +40,7 @@ export default function About() {
     };
 
     const handleContactUs = () => {
-        navigate('/contactus');
+        navigate('/contact');
     };
 
     const handleBookNow = () => {

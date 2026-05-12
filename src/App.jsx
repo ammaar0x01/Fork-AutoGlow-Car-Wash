@@ -23,6 +23,7 @@ import AddressDetails from "./pages/public/AddressDetails";
 
 // --- other ---
 import All from "./pages/_temp/All";
+import Services from "./pages/public/Services";
 
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/contact" element={<ContactUs />} />
         
         {/* +++ Services */}
+        <Route path="/services" element={<Services />} />
         <Route path="/exterior" element={<ExteriorWash />} />
         <Route path="/interior" element={<InteriorCare />} />
         <Route path="/full-detailing" element={<FullDetailing />} />

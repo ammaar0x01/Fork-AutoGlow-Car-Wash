@@ -13,3 +13,8 @@ const buttonStyles = {
 
 }
 
+const headings = {
+    section_heading: `text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight`, 
+    heading1: `text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight`, 
+
+}

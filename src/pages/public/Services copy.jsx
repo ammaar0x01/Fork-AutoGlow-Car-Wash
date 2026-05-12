@@ -4,13 +4,6 @@ import "./Home.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-// Import images from src folder
-// const BASE_URL = "../../assets/images/cars/home/"
-// import butterfly from `${BASE_URL}suv.png`;
-
-// import butterfly from "../../assets/images/cars/home/suv.png";
-// import mission from "../../assets/images/cars/home/mission-bg.jpg";
-
 import butterfly from "../../assets/images/cars/home/suv.png";
 import POLISH_IMAGE from "../../assets/images/cars/home/polish.png";
 import FULL_WASH_IMAGE from "../../assets/images/cars/home/full-wash.png";
@@ -25,21 +18,8 @@ import MISSION_IMAGE from "../../assets/images/cars/home/mission-bg.jpg";
 import ReviewCarousel from "../../components/ReviewCarousel";
 
 
-// import butterfly from "../assets/suv.png";
-// import POLISH_IMAGE from "../assets/polish.png";
-// import FULL_WASH_IMAGE from "../assets/full-wash.png";
-// import DETAILING_IMAGE from "../assets/detailing.png";
-// import ENGINE_IMAGE from "../assets/engine-wash.jpg";
-// import WAXING_IMAGE from "../assets/waxing.png";
-// import INTERIOR_IMAGE from "../assets/interior.png";
-// import HERO_IMAGE from "../assets/hero-carwash.jpg";
-// import ABOUT_IMAGE from "../assets/about-us.png"; // Add your about image
-// import MISSION_IMAGE from "../assets/mission-bg.jpg"; // Add your mission image
-// import ReviewCarousel from "./components/ReviewCarousel";
-
-
-export default function Home() {
-    document.title = "Home" 
+export default function Services() {
+    document.title = "Services" 
 
     const categories = [
         {
@@ -80,7 +60,7 @@ export default function Home() {
             <Navbar />
 
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="hero-section"
                 // style={{ backgroundImage: `url(${HERO_IMAGE})` }}
                 style={{ backgroundImage: `url(${HERO_IMAGE})` }}
@@ -88,30 +68,40 @@ export default function Home() {
             >
                 <div className="hero-overlay"></div>
                 <div className="hero-content">
-                    <h1 className="hero-heading">We bring the shine to you.</h1>
-                    <h2 className="hero-subheading">
-                        Your car, our care – Anywhere.
-                    </h2>
-                    <div className="book-now-container">
+                    {/* <h1 className="hero-heading">We bring the shine to you.</h1> 
+                    <h2 className="hero-subheading">Our Services</h2>
+                    {/* <div className="book-now-container">
                         <button
                             onClick={() => (window.location.href = "/login")}
                             className="cta-button primary"
                         >
                             BOOK NOW
                         </button>
-                    </div>
+                    </div> *
                 </div>
-            </section>
+            </section> */}
+
+{/* version1*/}
+            <div className="about-hero">
+                <h1>Services</h1>
+                <p>Transforming car care with passion and precision</p>
+                <div className="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <i className="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+
 
             {/* Our services */}
             <div className="business-services">
                 <div className="service-card-background-container">
-                    <h1 className="business-section-heading">Business Services</h1>
+                    {/* <h1 className="business-section-heading">Business Services</h1> */}
 
                     <div className="service-card-grid app-content">
                         <div
-                            className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
+                            // className="service-card with-bg"
+                            // style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Exterior Wash</h3>
@@ -120,6 +110,7 @@ export default function Home() {
                                     with our bulk cleaning service.
                                 </p>
                                 <button
+                                    className="bg-blue-800 rounded-full text-white p-3 hover:bg-blue-400"
                                     onClick={() => (window.location.href = "/exterior-wash")}
                                 >
                                     Learn more
@@ -129,7 +120,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
+                            // style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Interior Care</h3>
@@ -147,7 +138,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
+                            // style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Full Detailing</h3>
@@ -165,7 +156,7 @@ export default function Home() {
 
                         <div
                             className="service-card with-bg"
-                            style={{ backgroundImage: `url(${butterfly})` }}
+                            // style={{ backgroundImage: `url(${butterfly})` }}
                         >
                             <div className="card-overlay">
                                 <h3>Protection Services</h3>
@@ -182,8 +173,62 @@ export default function Home() {
                 </div>
             </div>
 
+{/* version1 */}
+            <section className="bg-gray-50 py-12 px-4">
+    <div className="max-w-6xl mx-auto">
+        {/* Optional Heading: <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">Business Services</h1> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Service Card Component - repeated for each service */}
+            {[
+                {
+                    title: "Exterior Wash",
+                    desc: "Keep your business fleet spotless and professional-looking with our bulk cleaning service.",
+                    link: "/exterior-wash"
+                },
+                {
+                    title: "Interior Care",
+                    desc: "Offer your employees a sparkling perk with our customizable corporate wash plans.",
+                    link: "/corporate-packages"
+                },
+                {
+                    title: "Full Detailing",
+                    desc: "Partner with us to offer our mobile services at your location and share in the shine.",
+                    link: "/partner-with-us"
+                },
+                {
+                    title: "Protection Services",
+                    desc: "Looking to start your own car wash business? Explore our franchise options today.",
+                    link: "/franchise"
+                }
+            ].map((service, index) => (
+                <div 
+                    key={index} 
+                    className="relative overflow-hidden rounded-xl bg-white shadow-md border border-gray-100 p-6 flex flex-col transition-transform hover:scale-[1.02]"
+                >
+                    <div className="flex-grow">
+                        <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                            {service.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                            {service.desc}
+                        </p>
+                    </div>
+                    <button
+                        className="w-full bg-blue-800 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-colors duration-200"
+                        onClick={() => (window.location.href = service.link)}
+                    >
+                        Learn More
+                    </button>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+
             {/* stats banner */}
-            <section className="stats-banner">
+            {/* <section className="stats-banner">
                 <div className="stats-container">
                     <div className="stat">
                         <CountUp end={1000} start={990} duration={2000} />
@@ -194,47 +239,14 @@ export default function Home() {
                         <p className="stat-label">Locations Served</p>
                     </div>
                 </div>
-            </section>
-
-            {/* About Us Section with Zoom Effect */}
-            <ZoomSection
-                image={ABOUT_IMAGE}
-                title="About Us"
-                content={
-                    <div className="about-content">
-                        <h2>Our Values</h2>
-                        <p>
-                            At Mobile Glow Car Wash, we provide a premium mobile car detailing service that focuses on
-                            delivering convenience and luxury to your doorstep. Our team is dedicated to ensuring
-                            the highest quality standards in car care, with a meticulous attention to detail.
-                            Experience the ultimate in professional car detailing services with us.
-                        </p>
-                    </div>
-                }
-                isRight={false}
-            />
-
-            {/* Mission Section with Zoom Effect */}
-            <ZoomSection
-                image={MISSION_IMAGE}
-                title="Our Mission"
-                content={
-                    <div className="mission-content">
-                        <p>
-                            At Mobile Glow Car Wash, we are dedicated to providing a mobile car detailing service that
-                            brings convenience, luxury, and exceptional care right to your doorstep. Our focus on
-                            quality ensures that your vehicle receives the best treatment possible, leaving it
-                            looking pristine and well-maintained.
-                        </p>
-                    </div>
-                }
-                isRight={true}
-            />
+            </section> */}
 
             {/* Categories Section - UPDATED WITH NAVY BACKGROUND */}
             <section id="our-services" className="categories-section">
                 <div className="section-container">
-                    <h1 className="section-heading">Our Services</h1>
+                    {/* <h1 className="section-heading">Our Services</h1> */}
+                    <h1 className="section-heading">All of our Services</h1>
+
                     <p className="section-subheading">
                         Professional car care services delivered to your doorstep at your convenience
                     </p>
@@ -264,28 +276,6 @@ export default function Home() {
                 <ReviewCarousel />
             </div>
 
-            {/* Loyalty Section */}
-            <section className="loyalty-section">
-                <div className="section-container loyalty-container">
-                    <div className="loyalty-content">
-                        <h2 className="loyalty-heading">LOYALTY ISN'T CHEAP</h2>
-                        <p className="loyalty-text">But we make it worth it. Our loyalty program offers exclusive benefits:</p>
-                        <ul className="loyalty-benefits">
-                            <li>Earn points with every service</li>
-                            <li>Redeem points for discounts</li>
-                            <li>Priority booking</li>
-                            <li>Exclusive member-only offers</li>
-                        </ul>
-                    </div>
-                    <div className="loyalty-visual">
-                        <div className="loyalty-card">
-                            <div className="loyalty-icon">🎁</div>
-                            <h3>Loyalty Program</h3>
-                            <p>Join today and start earning rewards with every service!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <Footer />
         </div>

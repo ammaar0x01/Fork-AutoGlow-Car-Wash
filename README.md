@@ -16,7 +16,7 @@ Welcome to the Mobile Car Wash application repository! This project is designed 
 This is a web-based car wash management system that allows customers to create accounts, save vehicles, and book car wash services online. The platform also includes employee and manager portals for managing bookings, monitoring operations, and tracking employee performance and productivity.
 
 In this repository, you'll find the source code for the application that powers the mobile car wash service, allowing users to easily schedule, manage, and track their car wash appointments.
----
+<hr />
 
 
 ## Updates 
@@ -32,7 +32,7 @@ npx tailwindcss init -p
 
 Then modify tailwind.config file if necessary
 ```
----
+<hr />
 
 
 ## Key commands
@@ -50,7 +50,7 @@ npm run build
 # Serve the built version of the app
 serve -s build 
 ```
----
+<hr />
 
 
 ## Screenshots
@@ -65,3 +65,4 @@ serve -s build
 
 ## More notes 
 <p>temp</p>
+<hr />

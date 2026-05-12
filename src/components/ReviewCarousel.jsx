@@ -3,8 +3,83 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import butterfly from "../../assets/images/butterfly.png"; 
-import googleLogo from "../../assets/images/image.png";
+import butterfly from "../assets/images/cars/home/suv.png";
+import googleLogo from "../assets/icons/image.png";
+
+// import butterfly from "../assets/images/butterfly.png"; 
+// import googleLogo from "../assets/images/image.png";
+
+
+// export default function ReviewCarousel() {
+//   const settings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 5000,
+//     arrows: true,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   };
+
+//   return (
+//     <section className="reviews-section">
+//       <div className="section-container">
+//         <h1 className="carousel-heading">Customer Reviews</h1>
+//         <p className="section-subheading">
+//           See what our customers are saying about our services
+//         </p>
+
+//         <Slider {...settings} className="reviews-grid">
+//           {reviews.map(({ name, date, location, rating, text }, index) => (
+//             <div key={index} className="review-card">
+//               <div className="review-header">
+//                 <img
+//                   src={butterfly}
+//                   alt="Profile"
+//                   className="review-profile-photo"
+//                 />
+//                 <div className="reviewer-info">
+//                   <strong className="reviewer-name">{name}</strong>
+//                   <div className="review-meta">
+//                     <span className="review-date">{date}</span> |{" "}
+//                     <span className="review-location">{location}</span>
+//                   </div>
+//                 </div>
+//                 <img
+//                   src={googleLogo}
+//                   alt="Google Logo"
+//                   className="google-logo"
+//                 />
+//               </div>
+
+//               <div className="review-stars">
+//                 {[...Array(5)].map((_, i) => (
+//                   <span
+//                     key={i}
+//                     className={`star ${i < rating ? "filled" : ""}`}
+//                   >
+//                     ★
+//                   </span>
+//                 ))}
+//               </div>
+
+//               <p className="review-text">"{text}"</p>
+//             </div>
+//           ))}
+//         </Slider>
+//       </div>
+//     </section>
+//   );
+// };
 
 
 export default function ReviewCarousel() {
@@ -28,56 +103,68 @@ export default function ReviewCarousel() {
   };
 
   return (
-    <section className="reviews-section">
-      <div className="section-container">
-        <h1 className="carousel-heading">Customer Reviews</h1>
-        <p className="section-subheading">
-          See what our customers are saying about our services
-        </p>
+    <section className="bg-gray-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            Customer Reviews
+          </h1>
+          <p className="text-lg text-gray-600">
+            See what our customers are saying about our services
+          </p>
+        </div>
 
-        <Slider {...settings} className="reviews-grid">
+        <Slider {...settings} className="review-slider">
           {reviews.map(({ name, date, location, rating, text }, index) => (
-            <div key={index} className="review-card">
-              <div className="review-header">
-                <img
-                  src={butterfly}
-                  alt="Profile"
-                  className="review-profile-photo"
-                />
-                <div className="reviewer-info">
-                  <strong className="reviewer-name">{name}</strong>
-                  <div className="review-meta">
-                    <span className="review-date">{date}</span> |{" "}
-                    <span className="review-location">{location}</span>
+            <div key={index} className="px-2"> {/* Padding for slide spacing */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[250px] flex flex-col">
+                
+                {/* Review Header */}
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={butterfly}
+                    alt="Profile"
+                    className="w-12 h-12 rounded-full object-cover border border-gray-200"
+                  />
+                  <div className="flex-1">
+                    <strong className="block text-gray-900 font-semibold leading-tight">
+                      {name}
+                    </strong>
+                    <div className="text-xs text-gray-500 mt-1">
+                      <span>{date}</span> • <span>{location}</span>
+                    </div>
                   </div>
+                  <img
+                    src={googleLogo}
+                    alt="Google Logo"
+                    className="w-6 h-6 object-contain opacity-80"
+                  />
                 </div>
-                <img
-                  src={googleLogo}
-                  alt="Google Logo"
-                  className="google-logo"
-                />
-              </div>
 
-              <div className="review-stars">
-                {[...Array(5)].map((_, i) => (
-                  <span
-                    key={i}
-                    className={`star ${i < rating ? "filled" : ""}`}
-                  >
-                    ★
-                  </span>
-                ))}
-              </div>
+                {/* Stars */}
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span
+                      key={i}
+                      className={`text-lg ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
 
-              <p className="review-text">"{text}"</p>
+                {/* Review Text */}
+                <p className="text-gray-700 italic leading-relaxed flex-1">
+                  "{text}"
+                </p>
+              </div>
             </div>
           ))}
         </Slider>
       </div>
     </section>
   );
-};
-
+}
 
 const reviews = [
   {
