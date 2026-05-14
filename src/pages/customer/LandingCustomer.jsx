@@ -1,10 +1,11 @@
-import { useScrollReveal } from "../../hooks/useScrollReveal"; // adjust path
+import { useScrollReveal } from "../../hooks/useScrollReveal"; 
 import butterfly from "../../assets/about-us.png";
 import React, { useState, useEffect, useRef } from "react";
 
 import "./LandingCustomer.css";
-import NavbarCustomer from "../components/NavbarCustomer"; // fixed path
-import Footer from "../components/Footer"; // fixed path
+
+import NavbarCustomer from "../components/NavbarCustomer"; 
+import Footer from "../components/Footer"; 
 
 import FULL_WASH_IMAGE from "../../assets/full-wash.png";
 import DETAILING_IMAGE from "../../assets/detailing.png";

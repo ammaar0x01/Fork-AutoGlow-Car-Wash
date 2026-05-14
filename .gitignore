@@ -24,4 +24,6 @@ yarn-error.log*
 
 # --- newer --- 
 _trash 
+
 _notes.txt 
+.env 

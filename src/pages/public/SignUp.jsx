@@ -560,7 +560,7 @@ export default function SignUp() {
             return;
         }
 
-        navigate('/AddressDetails', { state: { manager } });
+        navigate('/address', { state: { manager } });
     };
 
     return (

@@ -4,7 +4,7 @@ import { customerService } from '../../services/customerService';
 import './ProfileManagement.css';
 
 
-export default function ProfileManagement(){
+export default function EmployeeProfileManagement(){
     const [customers, setCustomers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);

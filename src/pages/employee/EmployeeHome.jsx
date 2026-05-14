@@ -1,15 +1,17 @@
 import React from "react";
 
-import NavbarEmployee from "../components/NavbarEmployee";
-import Footer from "../components/Footer";
-import bookingsIcon from "../../assets/bookings.png";
-import employeesIcon from "../../assets/employees.png";
-import servicesIcon from "../../assets/services.png";
-import performanceIcon from "../../assets/performance.png";
-import heroCarwash from "../../assets/hero-carwash.jpg";
+import NavbarEmployee from "../../components/NavbarEmployee";
+import Footer from "../../components/Footer";
 
+import bookingsIcon from "../../assets/images/simple/bookings.png";
+import employeesIcon from "../../assets/images/simple/employees.png";
+import servicesIcon from "../../assets/images/simple/services.png";
+import performanceIcon from "../../assets/images/simple/performance.png";
+import heroCarwash from "../../assets/images/cars/home/hero-carwash.jpg";
 
-export default function LandingEmployee(){
+import "./LandingEmployee.css"
+
+export default function EmployeeHome(){
     return (
         <div className="employee-landing-page">
             <NavbarEmployee />

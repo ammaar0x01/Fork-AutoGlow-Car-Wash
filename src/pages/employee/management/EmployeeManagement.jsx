@@ -3,9 +3,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { employeeServiceSimple } from "../../../services/employeeService";
+
 import "./EmployeeManagement.css";
-import NavbarEmployee from "./components/NavbarEmployee";
-import Footer from "./components/Footer";
+
+import NavbarEmployee from "../../../components/NavbarEmployee";
+import Footer from "../../../components/Footer";
 
 
 export default function EmployeeManagement() {

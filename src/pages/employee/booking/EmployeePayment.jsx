@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import "./PaymentPage.css";
-import NavbarEmployee from "../../../screens/components/NavbarEmployee";
-import Footer from "../../../screens/components/Footer";
+import NavbarEmployee from "../../../components/NavbarEmployee";
+import Footer from "../../../components/Footer";
 
 
-export default function PaymentPage(){
+export default function EmployeePayment(){
   const { bookingId } = useParams();
   const navigate = useNavigate();
 

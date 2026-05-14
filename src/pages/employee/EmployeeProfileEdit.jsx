@@ -5,7 +5,7 @@ import { employeeService } from "../../services/employeeService";
 import api from "../../services/api";
 
 
-export default function EditEmployeeProfile() {
+export default function EmployeeProfileEdit() {
   const navigate = useNavigate();
   const [employee, setEmployee] = useState({
     userName: "",

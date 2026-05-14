@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { apiClient } from '../../../services/api';
 
 import './CleaningServiceManagement.css';
-import NavbarEmployee from "../../components/NavbarEmployee";
-import Footer from '../../components/Footer';
-// import '../../components/Footer.css';
+
+import NavbarEmployee from "../../../components/NavbarEmployee";
+import Footer from "../../../components/Footer";
 
 
-export default function CleaningServiceManagement(){
+export default function EmployeeCleaning(){
     // ========================================
     // HOOKS & STATE
     // ========================================

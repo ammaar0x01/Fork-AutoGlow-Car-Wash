@@ -4,13 +4,13 @@ import { MdFilterList } from "react-icons/md";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-import NavbarEmployee from "../../../screens/components/NavbarEmployee";
-import Footer from "../../components/Footer";
-// import "../../components/Footer.css";
+import NavbarEmployee from "../../../components/NavbarEmployee";
+import Footer from "../../../components/Footer";
+
 import "./ManageBookings.css";
 
 
-export default function ManageBookings() {
+export default function EmployeeManageBookings() {
   const navigate = useNavigate();
 
   const [bookings, setBookings] = useState([]);
