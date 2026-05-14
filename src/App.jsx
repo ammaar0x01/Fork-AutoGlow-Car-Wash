@@ -194,14 +194,36 @@ export default function App() {
         {/* --- Employee / Business */}
         <Route path="/employee" element={<EmployeeHome />} /> 
         <Route path="/employee/home" element={<EmployeeHome />} /> 
+        
         <Route path="/employee/profile" element={<EmployeeProfile />} /> 
         <Route path="/employee/profile-edit" element={<EmployeeProfileEdit />} /> 
         <Route path="/employee/profile-manage" element={<EmployeeProfileManagement />} /> 
+        
         <Route path="/employee/payment" element={<EmployeePayment />} /> 
         <Route path="/employee/bookings" element={<EmployeeManageBookings />} /> 
         <Route path="/employee/cleaning" element={<EmployeeCleaning />} /> 
         <Route path="/employee/management" element={<EmployeeManagement />} /> 
         <Route path="/employee/performance" element={<EmployeePerformance />} /> 
+
+
+//         {/* --- Customer */}
+//         {/* <Route path="/customer/home" element={<LandingCustomer />} />  */}
+//         {/* <Route path="/customer/exterir-account" element={<DeactivateAccount />} /> */}
+
+
+// {/* 
+//         <Route path="/vehicles" element={<VehiclePage />} />
+//         <Route path="/profiles" element={<ProfilePage />} />
+//         <Route path="/booking" element={<Booking />} />
+//         <Route path="/bookingtwo" element={<BookingTwo />} />
+//         <Route path="/bookingvehicle" element={<BookingVehicle />} /> 
+//         <Route path="/confirm" element={<ConfirmBookingPage />} />
+//         <Route path="/payment/:bookingId" element={<PaymentPage />} />
+//         <Route path="/EditCustomerProfile" element={<EditCustomerProfile />} />
+//         <Route path="/password-reset" element={<PasswordReset />} />
+//         <Route path="/deactivate-account" element={<DeactivateAccount />} />
+//         <Route path="/bookinghistory" element={<BookingHistory />} /> */}
+         
 
         {/* --- Testing */}
         <Route path="/temp/all" element={<All />} />
@@ -211,6 +233,8 @@ export default function App() {
         {/* --- 404 Catch-all Route --- */}
         {/* This must be the last route in the list */}
         <Route path="*" element={<NotFound />} />
+     
+        {/* unauth ? */}
       </Routes>
     </Router>
   );
