@@ -1,19 +1,19 @@
 
 export const pageNames = {
     home: "Kleen Masheens", 
-    about: "About", 
-    contact: "Contact", 
+    about: "About Us | Kleen Masheens", 
+    contact: "Contact Us | Kleen Masheens", 
 
-    services: "Services", 
+    services: "Services | Kleen Masheens", 
     s_interior: "Interior Care", 
     s_exterior: "Exterior Wash", 
     s_full: "Full Detailing", 
     s_protection: "Protection Services", 
 
 
-    role: "Kleen Masheens - Role Selection", 
-    login: "Kleen Masheens - Login", 
-    signup: "Kleen Masheens - Sign Up", 
+    role: "Role Selection", 
+    login: "Login", 
+    signup: "Sign Up", 
 
     employee: "Employee", 
 

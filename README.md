@@ -1,7 +1,8 @@
-# MobileGlow | Cleen Masheens | Kleen 'n Sheen
+# Kleen maSheens
+
 - About:    A webapp using react for a car-wash service 
 - Started:  2025-05-dd
-- Updated:  2026-05-12
+- Updated:  2026-05-14
 - Version:  0.2
 - Status: work-in-progress
 - Developers 
@@ -25,12 +26,13 @@ In this repository, you'll find the source code for the application that powers 
 ```
 npm install -D tailwindcss postcss autoprefixer
 
-# use this version; version 3
+# Use this version; version 3
 npm install -D tailwindcss@3 postcss autoprefixer
 
+# Then 
 npx tailwindcss init -p
 
-Then modify tailwind.config file if necessary
+# Then modify tailwind.config file if necessary
 ```
 <hr />
 
@@ -60,6 +62,9 @@ serve -s build
 </p>
 <!-- <img src="./screenshots/Screenshot From 2026-05-11 19-45-41.png" alt="Home page" width="50%">
 <img src="./screenshots/Screenshot From 2026-05-11 19-47-45.png" alt="Home page (mobile view)" width="50%"> -->
+
+<img src="./screenshots/Screenshot From 2026-05-14 16-06-20.png" />
+
 <hr />
 
 

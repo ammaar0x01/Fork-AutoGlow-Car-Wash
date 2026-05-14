@@ -146,12 +146,12 @@ import InteriorCare from "./pages/public/services/InteriorCare";
 import FullDetailing from "./pages/public/services/FullDetailing";
 import ProtectionService from "./pages/public/services/ProtectionService";
 // 
-import Login from "./pages/public/Login";
-import SignUp from "./pages/public/SignUp";
-import RoleSelection from "./pages/public/RoleSelection";
-import AddressDetails from "./pages/public/AddressDetails";
+import Login from "./pages/account-related/Login";
+import SignUp from "./pages/account-related/SignUp";
+import RoleSelection from "./pages/account-related/RoleSelection";
+import AddressDetails from "./pages/account-related/AddressDetails";
 import PasswordReset from "./pages/other/PasswordReset";
-import DeactivateAccount from "./pages/public/DeactivateAccount";
+import DeactivateAccount from "./pages/account-related/DeactivateAccount";
 
 // --- other ---
 import All from "./pages/_temp/All";
@@ -169,6 +169,7 @@ import EmployeePerformance from "./pages/employee/management/EmployeePerformance
 import NotFound from "./pages/other/NotFound"; 
 
 import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
+import Contact from "./pages/public/Contact";
 // import AboutUsCustomer from "./pages/customer/AboutUsCustomer";
 // import ContactUsCustomer from "./pages/customer/ContactUsCustomer";
 
@@ -180,7 +181,9 @@ export default function App() {
         {/* --- Public */}
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact1" element={<ContactUs />} />
+        <Route path="/contact" element={<Contact />} />
+
         
         {/* +++ Services */}
         <Route path="/services" element={<Services />} />
