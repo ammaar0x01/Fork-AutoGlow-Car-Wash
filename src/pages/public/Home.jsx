@@ -3,7 +3,9 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+
 import ReviewCarousel from "../../components/ReviewCarousel";
+import { pageNames } from "../pageNames";
 
 import butterfly from "../../assets/images/cars/home/suv.png";
 import POLISH_IMAGE from "../../assets/images/cars/home/polish.png";
@@ -18,7 +20,7 @@ import MISSION_IMAGE from "../../assets/images/cars/home/mission-bg.jpg";
 
 
 export default function Home() {
-    document.title = "Home" 
+    document.title = pageNames.home 
 
     const categories = [
         {

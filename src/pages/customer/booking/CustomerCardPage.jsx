@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-import NavbarCustomer from "../../../screens/components/NavbarCustomer";
-import Footer from "../../components/Footer";
+import NavbarCustomer from "../../../components/NavbarCustomer";
+import Footer from "../../../components/Footer";
+
 import "./CustomerCard.css";
 
 

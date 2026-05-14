@@ -168,6 +168,11 @@ import EmployeePerformance from "./pages/employee/management/EmployeePerformance
 // +++ Import the 404 Component
 import NotFound from "./pages/other/NotFound"; 
 
+import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
+// import AboutUsCustomer from "./pages/customer/AboutUsCustomer";
+// import ContactUsCustomer from "./pages/customer/ContactUsCustomer";
+
+
 export default function App() {
   return (
     <Router>
@@ -229,6 +234,14 @@ export default function App() {
         <Route path="/temp/all" element={<All />} />
         <Route path="/temp/password" element={<PasswordReset />} />
         <Route path="/password-reset" element={<PasswordReset />} />
+
+        <Route path="/temp/card" element={<CustomerCardsPage />} />
+
+        {/* remove */}
+        {/* <Route path="/temp/c1" element={<AboutUsCustomer />} /> */}
+        {/* <Route path="/temp/c2" element={<ContactUsCustomer />} /> */}
+        {/* remove */}
+
 
         {/* --- 404 Catch-all Route --- */}
         {/* This must be the last route in the list */}
