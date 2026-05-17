@@ -21,10 +21,11 @@ export const pageNames = {
 
 }
 
+// function setPageTitle(){ }
 function pageTitle(){ }
 
 
-const pageRoutes = {
+export const pageRoutes = {
     // --- Public 
     root: "/", 
     home: "/home", 

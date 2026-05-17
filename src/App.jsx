@@ -135,26 +135,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// --- Pages --- 
+// --- PAGES --- 
 // --- public --- 
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
-// import ContactUs from "./pages/public/ContactUs";
+import Contact from "./pages/public/Contact";
+
 import Services from "./pages/public/Services";
 import ExteriorWash from "./pages/public/services/ExteriorWashService";
 import InteriorCare from "./pages/public/services/InteriorCare";
 import FullDetailing from "./pages/public/services/FullDetailing";
 import ProtectionService from "./pages/public/services/ProtectionService";
-// 
+
+// --- account-related ---
 import Login from "./pages/account-related/Login";
 import SignUp from "./pages/account-related/SignUp";
 import RoleSelection from "./pages/account-related/RoleSelection";
 import AddressDetails from "./pages/account-related/AddressDetails";
-import PasswordReset from "./pages/other/PasswordReset";
+import PasswordReset from "./pages/account-related/PasswordReset";
 import DeactivateAccount from "./pages/account-related/DeactivateAccount";
 
-// --- other ---
-import All from "./pages/_temp/All";
+// --- employee --- 
 import EmployeeHome from "./pages/employee/EmployeeHome";
 import EmployeeProfile from "./pages/employee/EmployeeProfile";
 import EmployeeProfileEdit from "./pages/employee/EmployeeProfileEdit";
@@ -165,14 +166,16 @@ import EmployeeCleaning from "./pages/employee/management/EmployeeCleaning";
 import EmployeeManagement from "./pages/employee/management/EmployeeManagement";
 import EmployeePerformance from "./pages/employee/management/EmployeePerformance";
 
-// +++ Import the 404 Component
-import NotFound from "./pages/other/NotFound"; 
+// --- customer --- 
 
+
+// --- other ---
+import All from "./pages/_temp/All";
+import NotFound from "./pages/other/NotFound"; 
 import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
-import Contact from "./pages/public/Contact";
 import Meta from "./pages/other/Meta";
-// import AboutUsCustomer from "./pages/customer/AboutUsCustomer";
-// import ContactUsCustomer from "./pages/customer/ContactUsCustomer";
+
+// -------------------------------------------------------------
 
 
 export default function App() {
@@ -189,16 +192,25 @@ export default function App() {
         {/* +++ Services */}
         <Route path="/services" element={<Services />} />
         <Route path="/exterior" element={<ExteriorWash />} />
+        {/* or */}
+        {/* <Route path="/services/exterior" element={<Services />} /> */}
+
         <Route path="/interior" element={<InteriorCare />} />
         <Route path="/full-detailing" element={<FullDetailing />} />
         <Route path="/protection" element={<ProtectionService />} />
         
         {/* +++ Account-related */}
         <Route path="/login" element={<Login />} />
+        {/* or */}
+        {/* <Route path="/account/login" element={<Login />} /> */}
+        {/* <Route path="/account/..." element={<Login />} /> */}
+
         <Route path="/create-account" element={<SignUp />} />
         <Route path="/role" element={<RoleSelection />} />
         <Route path="/address" element={<AddressDetails />} />
         <Route path="/deactivate-account" element={<DeactivateAccount />} />
+        {/* <Route path="/reset-password" element={<PasswordReset />} /> */}
+        <Route path="/change-password" element={<PasswordReset />} />
 
         {/* --- Employee / Business */}
         <Route path="/employee" element={<EmployeeHome />} /> 
@@ -241,7 +253,6 @@ export default function App() {
         {/* --- Testing */}
         <Route path="/temp/all" element={<All />} />
         <Route path="/temp/password" element={<PasswordReset />} />
-        <Route path="/password-reset" element={<PasswordReset />} />
 
         <Route path="/temp/card" element={<CustomerCardsPage />} />
         <Route path="/_metadata" element={<Meta />} />
@@ -249,7 +260,6 @@ export default function App() {
 
 
         {/* --- 404 Catch-all Route --- */}
-        {/* This must be the last route in the list */}
         <Route path="*" element={<NotFound />} />
 
      

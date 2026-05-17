@@ -1,10 +1,12 @@
 # Kleen maSheens
 
 - About:    A webapp using react for a car-wash service 
-- Started:  2025-05-dd
-- Updated:  2026-05-14
-- Version:  0.2
-- Status: work-in-progress
+- Started:  2025-05-0d
+- Updated:  2026-05-17
+- Status:   work-in-progress
+- Version:  0.3
+- Branch:   frontend-main
+
 - Developers 
     + PrincessUgbobuaku
     + ammaar0x01

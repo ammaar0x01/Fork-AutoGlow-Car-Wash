@@ -168,14 +168,20 @@ export default function PasswordReset() {
             Change Password
           </button>
 
-           <a 
-            onClick={() => window.open()}
-            type="submit"
-            className="w-full bg-black hover:bg-[rgba(12,45,72,0.9)] text-white 
-              font-bold py-3.5 rounded-lg shadow-lg transition-all transform active:scale-95"
+
+          <button
+                       onClick={() => window.location.href = "/"}
+                      //  go back to prvious page 
+
+            className="w-full 
+              bg-red-800
+              hover:bg-red-600
+              text-white 
+              font-bold py-3.5 rounded-lg shadow-lg 
+              transition-all transform active:scale-95"
           >
             Go back
-          </a>
+          </button>
         </form>
       </div>
     </div>
