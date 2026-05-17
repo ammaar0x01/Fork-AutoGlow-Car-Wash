@@ -93,7 +93,12 @@ export default function PasswordReset() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12
+      bg-gradient-to-r from-purple-600 via-purple-800 to-purple-950
+    ">
+    {/* <div className="min-h-screen from-bg-purple-500 to-bg-purple-300 flex items-center justify-center px-4 py-12"> */}
+     
+     
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Change Password</h2>
@@ -162,6 +167,15 @@ export default function PasswordReset() {
           >
             Change Password
           </button>
+
+           <a 
+            onClick={() => window.open()}
+            type="submit"
+            className="w-full bg-black hover:bg-[rgba(12,45,72,0.9)] text-white 
+              font-bold py-3.5 rounded-lg shadow-lg transition-all transform active:scale-95"
+          >
+            Go back
+          </a>
         </form>
       </div>
     </div>

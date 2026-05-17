@@ -139,7 +139,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // --- public --- 
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
-import ContactUs from "./pages/public/ContactUs";
+// import ContactUs from "./pages/public/ContactUs";
 import Services from "./pages/public/Services";
 import ExteriorWash from "./pages/public/services/ExteriorWashService";
 import InteriorCare from "./pages/public/services/InteriorCare";
@@ -170,6 +170,7 @@ import NotFound from "./pages/other/NotFound";
 
 import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
 import Contact from "./pages/public/Contact";
+import Meta from "./pages/other/Meta";
 // import AboutUsCustomer from "./pages/customer/AboutUsCustomer";
 // import ContactUsCustomer from "./pages/customer/ContactUsCustomer";
 
@@ -181,7 +182,7 @@ export default function App() {
         {/* --- Public */}
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact1" element={<ContactUs />} />
+        {/* <Route path="/contact1" element={<ContactUs />} /> */}
         <Route path="/contact" element={<Contact />} />
 
         
@@ -205,12 +206,16 @@ export default function App() {
         
         <Route path="/employee/profile" element={<EmployeeProfile />} /> 
         <Route path="/employee/profile-edit" element={<EmployeeProfileEdit />} /> 
-        <Route path="/employee/profile-manage" element={<EmployeeProfileManagement />} /> 
+        {/* <Route path="/employee/profile-manage" element={<EmployeeProfileManagement />} />  */}
+        <Route path="/employee/manage-customers" element={<EmployeeProfileManagement />} /> 
+
         
-        <Route path="/employee/payment" element={<EmployeePayment />} /> 
+        <Route path="/employee/payments" element={<EmployeePayment />} /> 
         <Route path="/employee/bookings" element={<EmployeeManageBookings />} /> 
         <Route path="/employee/cleaning" element={<EmployeeCleaning />} /> 
-        <Route path="/employee/management" element={<EmployeeManagement />} /> 
+        {/* <Route path="/employee/management" element={<EmployeeManagement />} />  */}
+        <Route path="/employee/manage-employees" element={<EmployeeManagement />} /> 
+
         <Route path="/employee/performance" element={<EmployeePerformance />} /> 
 
 
@@ -239,16 +244,14 @@ export default function App() {
         <Route path="/password-reset" element={<PasswordReset />} />
 
         <Route path="/temp/card" element={<CustomerCardsPage />} />
-
-        {/* remove */}
-        {/* <Route path="/temp/c1" element={<AboutUsCustomer />} /> */}
-        {/* <Route path="/temp/c2" element={<ContactUsCustomer />} /> */}
-        {/* remove */}
+        <Route path="/_metadata" element={<Meta />} />
+        <Route path="/_" element={<Meta />} />
 
 
         {/* --- 404 Catch-all Route --- */}
         {/* This must be the last route in the list */}
         <Route path="*" element={<NotFound />} />
+
      
         {/* unauth ? */}
       </Routes>

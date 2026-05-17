@@ -506,6 +506,14 @@ export default function Login() {
             >
               Create New Account
             </button>
+
+                  <button
+              type="button"
+              onClick={() => navigate('/role')}
+              className="w-full bg-gray-100 text-gray-600 font-bold py-5 rounded-2xl transition-all hover:bg-gray-200 uppercase tracking-widest text-xs"
+            >
+            Use without an account
+            </button>
           </form>
 
           {/* Social Links */}
