@@ -1,25 +1,4 @@
 
-// export const pageNames = {
-//     home: "Kleen Masheens", 
-//     about: "About Us | Kleen Masheens", 
-//     contact: "Contact Us | Kleen Masheens", 
-
-//     services: "Services | Kleen Masheens", 
-//     s_interior: "Interior Care", 
-//     s_exterior: "Exterior Wash", 
-//     s_full: "Full Detailing", 
-//     s_protection: "Protection Services", 
-
-
-//     role: "Role Selection", 
-//     login: "Login", 
-//     signup: "Sign Up", 
-
-//     employee: "Employee", 
-
-//     customer: "Customer", 
-
-// }
 
 export const pageNames = {
     // --- Public Pages
@@ -78,20 +57,19 @@ export const pageNames = {
 function pageTitle(){ }
 
 
+// --- 36 routes --- // 
 export const pageRoutes = {
     // --- Public 
     root: "/", 
-    home: "/home", 
+    home: "/", 
     about: "/about", 
     contact: "/contact", 
 
     services: "/services", 
-    s_interior: "/interior",
-    // or 
-    // s_interior: "/services/interior", 
-    s_exterior: "/exterior", 
-    s_full: "/full-detailing", 
-    s_protection: "/protection", 
+    s_exterior: "/services/exterior", 
+    s_interior: "/services/interior",
+    s_full: "/services/full-detailing", 
+    s_protection: "/services/protection", 
 
     // --- Account related 
     role: "/role", 
@@ -106,29 +84,29 @@ export const pageRoutes = {
     // --- Employee 
     employee: "/employee", 
     e_home: "/employee/home", 
-    // or 
-    // employee_home: "/employee/home", 
     e_profile: "/employee/profile", 
-    e_profile_edit: "/employee/edit-profile", 
-    e_profile_manage: "/employee/manage-profile", // ? same as edit profile
-    e_payment: "/employee/payment", 
+    e_profile_edit: "/employee/profile-edit", 
+    // e_profile_manage: "/employee/manage-profile", // ? same as edit profile
+    e_payment: "/employee/payments", 
     e_bookings: "/employee/bookings", 
-    e_cleaning: "/employee/cleaning", 
-    e_management: "/employee/management", // ?  
+    e_services: "/employee/services", 
+    e_manage_employees: "/employee/manage-employees", 
+    e_manage_customers: "/employee/manage-customers", 
     e_performance: "/employee/performance", 
 
 
     // --- Customer 
     customer: "/customer", 
     c_home: "/customer/home", 
-    c_profile: "/customer/home", 
-    c_profile_edit: "/customer/home", 
-    c_vehicle: "/customer/home", 
-    c_booking: "/customer/home", 
-    c_booking_history: "/customer/home", 
-    c_deactivate_account: "/customer/home", 
-    c_password_reset: "/customer/home", 
-    c_confirm: "/customer/home", 
+    c_profile: "/customer/profile", 
+    c_profile_edit: "/customer/profile-edit", 
+    c_vehicles: "/customer/vehicles", 
+
+    c_booking: "/customer/booking", 
+    c_booking1: "/customer/booking1", 
+    c_booking_history: "/customer/booking/history", 
+    c_booking_vehicle: "/customer/booking/vehicle", 
+    c_booking_confirm: "/customer/booking/confirm", 
 
 
     // --- Other 

@@ -68,10 +68,10 @@ export default function Home() {
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                      {[
-                            { title: "Exterior Wash", desc: "Keep your business fleet spotless and professional.", link: "/exterior" },
-                            { title: "Interior Care", desc: "Experience a pristine cabin environment with meticulous detailing.", link: "/interior" },
-                            { title: "Full Detailing", desc: "Complete rejuvenation for your vehicle, inside and out.", link: "/full-detailing" },
-                            { title: "Protection Services", desc: "Advanced defensive layers to keep your vehicle looking newer.", link: "/protection" }
+                            { title: "Exterior Wash", desc: "Keep your business fleet spotless and professional.", link: "/services/exterior" },
+                            { title: "Interior Care", desc: "Experience a pristine cabin environment with meticulous detailing.", link: "/services/interior" },
+                            { title: "Full Detailing", desc: "Complete rejuvenation for your vehicle, inside and out.", link: "/services/full-detailing" },
+                            { title: "Protection Services", desc: "Advanced defensive layers to keep your vehicle looking newer.", link: "/services/protection" }
                         ].map((service, index) => (
                         <div
                             key={index}

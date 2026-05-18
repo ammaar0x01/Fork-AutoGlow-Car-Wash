@@ -7,16 +7,16 @@ import NavbarTemplate from "./NavbarTemplate";
 
 export default function NavbarEmployee() {
     const defaultNavLinks = [
-        { label: "Employee", path: "/about" },
+        { label: "Profile", path: "/employee/profile" },
         // { label: "Services", scrollTo: "our-services" },
         // { label: "Contact", path: "/contact" },
     ];
 
     const defaultAuthLinks = [
-        { label: "Profile", path: "/login", variant: "primary" },
-        { label: "Bookings", path: "/roles" },
-        { label: "Services", path: "/roles" },
-        { label: "Employees", path: "/roles" },
+        { label: "Bookings", path: "/employee/bookings" },
+        { label: "Services", path: "/employee/services" },
+        { label: "Log out", path: "/logout", variant: "primary" },
+
     ];
 
     const defaultMobileLinks = [...defaultNavLinks, ...defaultAuthLinks]

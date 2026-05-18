@@ -21,20 +21,25 @@ export default function Footer() {
                         </p>
                     </div>
 
+                    <div className="flex flex-col space-y-4"></div> 
+
                     {/* Customer Links */}
                     <div className="flex flex-col space-y-4">
                         <h4 className="text-white font-semibold uppercase tracking-wider text-xs leading-tight">
                             For Customers
                         </h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="/login" className="hover:text-blue-400 transition-colors">Log in or sign up</a></li>
-                            <li><a href="/download" className="hover:text-blue-400 transition-colors">Download the app</a></li>
-                            <li><a href="/help" className="hover:text-blue-400 transition-colors">Help and support</a></li>
+                            <li><a href="/login" className="hover:text-blue-400 transition-colors">Log in</a></li>
+                            <li><a href="/role" className="hover:text-blue-400 transition-colors">Sign up</a></li>
+                            <li><a href="/services" className="hover:text-blue-400 transition-colors">Services</a></li>
+
+                            {/* <li><a href="/download" className="hover:text-blue-400 transition-colors">Download the app</a></li> */}
+                            {/* <li><a href="/help" className="hover:text-blue-400 transition-colors">Help and support</a></li> */}
                         </ul>
                     </div>
 
                     {/* Business Links */}
-                    <div className="flex flex-col space-y-4">
+                    {/* <div className="flex flex-col space-y-4">
                         <h4 className="text-white font-semibold uppercase tracking-wider text-xs leading-tight">
                             For Businesses
                         </h4>
@@ -42,7 +47,7 @@ export default function Footer() {
                             <li><a href="/business" className="hover:text-blue-400 transition-colors">List your business</a></li>
                             <li><a href="/partnership" className="hover:text-blue-400 transition-colors">Partnership opportunities</a></li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Social Section */}
                     <div className="flex flex-col space-y-4">
@@ -59,7 +64,7 @@ export default function Footer() {
                                 <img src={facebookLogo} alt="Facebook" className="w-5 h-5 invert" />
                             </a>
                             <a
-                                href="https://instagram.com/..."
+                                href="https://instagram.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-all"

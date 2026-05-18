@@ -1,67 +1,3 @@
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// import { pageNames, pageRoutes } from "../pageNames";
-
-
-// export default function Meta() {
-//     document.title = ";)"
-
-//     const space = "\n    "
-//     const space1 = "\n        "
-//     // const space1 = " " * 30 
-    
-//     // --- add something related to local/session storage? 
-
-//     // <div className="flex flex-col items-center justify-center h-screen 
-//     //         bg-black text-white px-4">
-
-//     return (
-//         <div className="h-screen bg-black text-white font-light p-4">
-//             <pre className="p-3 text-orange-300">
-//             {"{"}
-                
-//                 {space}"started": "2026-05-0d", 
-//                 {space}"updated": "2026-05-17", 
-//                 {space}"version": "0.3", 
-//                 {space}"status": "work-in-progress", 
-
-//                 {space}"routes": [
-//                     {space1}# Public
-//                     {/* make a comment a different color, use '//' or '#' */}
-
-//                     {space1}"/", 
-//                     {space1}"/about", 
-//                     {space1}"/services", 
-//                     {space1}"/contact", 
-//                     {space1}
-
-
-//                     {space1}// Account-related
-
-//                     {space1}// Customer
-
-//                     {space1}// Employee
-
-//                     {space1}// Other
-
-                
-//                 {space}
-//                 ]
-
-
-// {/* loop through and display, and add hyperlinks to open in a NEW tab */}
-//                 {/* {pageRoutes._metadata} */}
-
-//             <br />
-//             { "}"}
-//             </pre>
-//         </div>
-//     )
-// };
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -78,8 +14,14 @@ export default function Meta() {
     // Helper arrays to group your pageRoutes keys by section
     const publicRoutes = ['root', 'home', 'about', 'contact', 'services', 's_interior', 's_exterior', 's_full', 's_protection'];
     const accountRoutes = ['role', 'login', 'signup', 'address', 'deactivate', 'change_password'];
-    const employeeRoutes = ['employee', 'e_home', 'e_profile', 'e_profile_edit', 'e_profile_manage', 'e_payment', 'e_bookings', 'e_cleaning', 'e_management', 'e_performance'];
-    const customerRoutes = ['customer', 'c_home', 'c_profile', 'c_profile_edit', 'c_vehicle', 'c_booking', 'c_booking_history', 'c_deactivate_account', 'c_password_reset', 'c_confirm'];
+    const employeeRoutes = [
+        'employee', 'e_home', 'e_profile', 'e_profile_edit', 'e_payment', 
+        'e_bookings', 'e_services', 'e_manage_employees', 'e_manage_customers', 'e_performance'
+    ];
+    const customerRoutes = [
+        'customer', 'c_home', 'c_profile', 'c_profile_edit', 'c_vehicles', 
+        'c_booking', 'c_booking1', 'c_booking_history', 'c_booking_vehicle', 'c_booking_confirm'
+    ];
     const otherRoutes = ['_metadata'];
 
     // Helper component to render a group of routes with clickability
@@ -87,7 +29,7 @@ export default function Meta() {
         return (
             <>
                 {/* Section Comment with a distinct code-comment color */}
-                <span className="text-gray-500">{indent3}// {comment}</span>
+                <span className="text-gray-500">{indent2}// {comment}</span>
                 {"\n"}
                 {keys.map((key, index) => {
                     const routePath = pageRoutes[key];
@@ -95,7 +37,7 @@ export default function Meta() {
                     
                     return (
                         <span key={key}>
-                            {indent3}"{key}": "
+                            {indent2}"{key}": "
                             <Link 
                                 to={routePath} 
                                 target="_blank" 
@@ -147,7 +89,7 @@ export default function Meta() {
                 {"\n"}
 
                 {/* 4. Employee Dashboard */}
-                <RenderRouteGroup keys={employeeRoutes} comment="Employee / Staff Engine" />
+                <RenderRouteGroup keys={employeeRoutes} comment="Employee Engine" />
                 {"\n"}
 
                 {/* 5. Other */}

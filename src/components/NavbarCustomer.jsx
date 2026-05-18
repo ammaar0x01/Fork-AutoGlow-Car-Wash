@@ -7,18 +7,18 @@ import NavbarTemplate from "./NavbarTemplate";
 
 export default function NavbarCustomer() {
   const defaultNavLinks = [
-    { label: "Customer", path: "/login" },
+    // { label: "Customer", path: "/login" },
 
-    // { label: "About", path: "/about" },
+    { label: "Profile", path: "/customer/profile" },
     // { label: "Services", scrollTo: "our-services" },
     // { label: "Contact", path: "/contact" },
   ];
 
   const defaultAuthLinks = [
-    { label: "Profile", path: "/roles"},
-    { label: "Bookings", path: "/roles"},
-    { label: "Vehicles", path: "/roles"},
-    { label: "Log out", path: "/roles", variant: "primary"}
+    // { label: "Profile", path: "/roles"},
+    { label: "Bookings", path: "/customer/booking"},
+    { label: "Vehicles", path: "/customer/vehicles"},
+    { label: "Log out", path: "/logout", variant: "primary"}
   ];
 
   // const defaultMobileLinks = [

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/icons/logo.jpg";
 
 // ===== DEFAULT NAV DATA =====
@@ -48,11 +48,18 @@ export default function NavbarTemplate({
         "text-white/90 font-normal text-sm px-4 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all";
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-[#0C2D48] shadow-md z-[1000]">
+        // <nav className="fixed top-0 left-0 w-full bg-[#0C2D48] shadow-md z-[1000]">
+        // or 
+        
+                 <nav className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 
+           bg-gradient-to-r from-blue-600 via-blue-800 to-blue-950
+           
+           border-b border-white/10`}>
+
             <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
 
                 {/* Logo */}
-                <div
+                {/* <div
                     className="flex items-center cursor-pointer group"
                     onClick={() => navigate("/")}
                 >
@@ -64,7 +71,19 @@ export default function NavbarTemplate({
                     <span className="text-white tracking-widest text-lg hidden sm:block">
                         MobileGlow
                     </span>
+                </div> */}
+
+                  <div className="flex-1 flex items-center">
+                    <div className="flex items-center cursor-pointer group" onClick={() => handleNavigation("/")}>
+                        <Link to="/" className="text-2xl font-black text-white tracking-tighter flex items-center gap-2">
+                            {/* <span className="bg-white text-blue-800 px-2 py-0.5 rounded-lg">M</span> */}
+                            <span className="bg-white text-blue-800 px-2 py-0.5 rounded-lg">M</span>
+
+                            MOBILEGLOW
+                        </Link>
+                    </div>
                 </div>
+
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-4">
@@ -129,11 +148,29 @@ export default function NavbarTemplate({
             </div>
 
             {/* Mobile Menu */}
-            <div
+            {/* <div
                 className={`fixed top-0 right-0 h-full w-[250px] bg-[#0C2D48] pt-24 transition-transform duration-300 z-[1000] ${
                     isMenuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
-            >
+            > */}
+
+                {/* <div className={`fixed top-0 right-0 h-full w-[250px] 
+                bg-gradient-to-r from-blue-600 via-blue-800 to-blue-950 
+                backdrop-blur-sm p-6 
+                shadow-2xl pt-24 transition-transform duration-300 ease-in-out z-[1000] 
+                ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+                > */}
+
+                {/* bg-[rgba(12,45,72,0.9)]  */}
+                {/* backdrop-blur-sm p-6  */}
+
+                        <div className={`fixed top-0 right-0 h-full w-[250px] 
+                bg-blue-800/90
+                shadow-2xl backdrop-blur-sm
+                pt-24 transition-transform duration-300 ease-in-out z-[1000] 
+                ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+                >
+                
                 <ul className="flex flex-col">
                     {mobileLinks.map((item, i) => (
                         <li
