@@ -73,14 +73,10 @@ serve -s build
 
 ## Video demo 
 <!-- <video src="./demo/demo-desktop.mp4" controls width="640" poster=""> -->
-<video src="./demo/demo-desktop.mp4" controls autoplay width="100%" poster="">
+<video src="./demo/output.mp4" controls autoplay width="100%" poster="">
 
   Your browser does not support the video tag.
 </video>
-
-<!-- [![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](./demo/demo-desktop.mp4) -->
-
-[![Watch the video](./demo/logo.jpg)](./demo/demo-desktop.mp4)
 <hr />
 
 ## File naming 

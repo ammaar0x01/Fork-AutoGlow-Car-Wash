@@ -25,5 +25,6 @@ yarn-error.log*
 # --- newer --- 
 _trash 
 
+demo/demo-desktop.mp4 
 _notes.txt 
 .env 
