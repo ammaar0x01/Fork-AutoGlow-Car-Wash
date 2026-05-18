@@ -12,7 +12,7 @@
     + PrincessUgbobuaku
     + ammaar0x01
 </pre>
----    
+<hr />
 
 
 ## More info
@@ -68,9 +68,20 @@ serve -s build
 <img src="./screenshots/Screenshot From 2026-05-11 19-47-45.png" alt="Home page (mobile view)" width="50%"> -->
 
 <img src="./screenshots/Screenshot From 2026-05-14 16-06-20.png" />
-
 <hr />
 
+
+## Video demo 
+<!-- <video src="./demo/demo-desktop.mp4" controls width="640" poster=""> -->
+<video src="./demo/demo-desktop.mp4" controls autoplay width="100%" poster="">
+
+  Your browser does not support the video tag.
+</video>
+
+<!-- [![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](./demo/demo-desktop.mp4) -->
+
+[![Watch the video](./demo/logo.jpg)](./demo/demo-desktop.mp4)
+<hr />
 
 ## File naming 
 <p>

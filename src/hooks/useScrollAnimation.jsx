@@ -1,11 +1,8 @@
-// MOVE THAT SCROLL ANIMATION HERE INSTEAD? ---
-
 import React, { useState, useEffect, useRef } from 'react';
 
 
 // Custom hook to handle scroll-based animation
 export default function useScrollAnimation (){
-
     const refs = useRef([]);
 
     useEffect(() => {

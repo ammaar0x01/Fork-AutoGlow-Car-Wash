@@ -1,11 +1,11 @@
 
 export const vehicleMakes = [
-  "Toyota", "Honda", "Ford", "Chevrolet", "BMW", "Mercedes-Benz", "Audi", 
-  "Volkswagen", "Nissan", "Hyundai", "Kia", "Mazda", "Subaru", "Lexus", 
-  "Infiniti", "Acura", "Volvo", "Jaguar", "Land Rover", "Porsche", "Tesla", 
-  "Genesis", "Lincoln", "Cadillac", "Buick", "Chrysler", "Dodge", "Jeep", 
-  "Ram", "GMC", "Mitsubishi", "Suzuki", "Isuzu", "Fiat", "Alfa Romeo", 
-  "Maserati", "Bentley", "Rolls-Royce", "Aston Martin", "McLaren", "Ferrari", 
+  "Toyota", "Honda", "Ford", "Chevrolet", "BMW", "Mercedes-Benz", "Audi",
+  "Volkswagen", "Nissan", "Hyundai", "Kia", "Mazda", "Subaru", "Lexus",
+  "Infiniti", "Acura", "Volvo", "Jaguar", "Land Rover", "Porsche", "Tesla",
+  "Genesis", "Lincoln", "Cadillac", "Buick", "Chrysler", "Dodge", "Jeep",
+  "Ram", "GMC", "Mitsubishi", "Suzuki", "Isuzu", "Fiat", "Alfa Romeo",
+  "Maserati", "Bentley", "Rolls-Royce", "Aston Martin", "McLaren", "Ferrari",
   "Lamborghini", "Bugatti", "Koenigsegg", "Pagani"
 ];
 
@@ -58,15 +58,15 @@ export const vehicleModels = {
 };
 
 export const vehicleColors = [
-  "White", "Black", "Silver", "Gray", "Red", "Blue", "Green", "Brown", "Beige", 
-  "Gold", "Yellow", "Orange", "Purple", "Pink", "Maroon", "Navy", "Turquoise", 
-  "Cream", "Tan", "Champagne", "Pearl White", "Metallic Black", "Metallic Silver", 
-  "Metallic Gray", "Metallic Blue", "Metallic Red", "Metallic Green", "Metallic Brown", 
-  "Metallic Gold", "Matte Black", "Matte Gray", "Matte Blue", "Carbon Black", 
-  "Jet Black", "Arctic White", "Alpine White", "Mineral White", "Space Gray", 
-  "Midnight Blue", "Deep Blue", "Royal Blue", "Electric Blue", "Bright Red", 
-  "Crimson Red", "Fire Red", "Racing Green", "Forest Green", "Emerald Green", 
-  "British Racing Green", "Champagne Gold", "Rose Gold", "Copper", "Bronze", 
+  "White", "Black", "Silver", "Gray", "Red", "Blue", "Green", "Brown", "Beige",
+  "Gold", "Yellow", "Orange", "Purple", "Pink", "Maroon", "Navy", "Turquoise",
+  "Cream", "Tan", "Champagne", "Pearl White", "Metallic Black", "Metallic Silver",
+  "Metallic Gray", "Metallic Blue", "Metallic Red", "Metallic Green", "Metallic Brown",
+  "Metallic Gold", "Matte Black", "Matte Gray", "Matte Blue", "Carbon Black",
+  "Jet Black", "Arctic White", "Alpine White", "Mineral White", "Space Gray",
+  "Midnight Blue", "Deep Blue", "Royal Blue", "Electric Blue", "Bright Red",
+  "Crimson Red", "Fire Red", "Racing Green", "Forest Green", "Emerald Green",
+  "British Racing Green", "Champagne Gold", "Rose Gold", "Copper", "Bronze",
   "Gunmetal", "Titanium", "Platinum", "Pearl", "Iridescent", "Chrome"
 ];
 
