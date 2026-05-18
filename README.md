@@ -1,5 +1,6 @@
 # Kleen maSheens
 
+<pre>
 - About:    A webapp using react for a car-wash service 
 - Started:  2025-05-0d
 - Updated:  2026-05-17
@@ -10,6 +11,7 @@
 - Developers 
     + PrincessUgbobuaku
     + ammaar0x01
+</pre>
 ---    
 
 
@@ -70,6 +72,19 @@ serve -s build
 <hr />
 
 
-## More notes 
-<p>temp</p>
+## File naming 
+<p>
+This project consists of various types of files. 
+Each file-type is named in a specific way
+</p>
+
+<pre>
+folders       - kebab case; example 'a-new-folder'
+[image files] - kebab case; example a-new-image.png /jpg /ico /webp
+
+.css  - kebab case; example, a-new-file.css
+.js   - camel case; example, aNewFile.js
+.jsx  - pascal case; example, ANewFile.jsx
+</pre>
+
 <hr />

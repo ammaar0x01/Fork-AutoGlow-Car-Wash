@@ -63,7 +63,7 @@ export const pageNames = {
     c_home: "Customer Dashboard | MobileGlow", 
     c_profile: "My Profile Details | MobileGlow", 
     c_profile_edit: "Edit Profile Info | MobileGlow", 
-    c_vehicle: "Manage Garage & Vehicles | MobileGlow", 
+    c_vehicle: "My Vehicles | MobileGlow", 
     c_booking: "Schedule New Detailing | MobileGlow", 
     c_booking_history: "Past Services & Invoices | MobileGlow", 
     c_deactivate_account: "Account Closure Request | MobileGlow", 

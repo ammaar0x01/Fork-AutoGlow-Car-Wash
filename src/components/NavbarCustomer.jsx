@@ -15,19 +15,22 @@ export default function NavbarCustomer() {
   ];
 
   const defaultAuthLinks = [
-    { label: "Vehicles", path: "/roles", variant: "primary" },
-    { label: "Bookings", path: "/roles", variant: "primary" },
-    { label: "Cards", path: "/roles", variant: "primary" },
-    { label: "Vehicles", path: "/roles", variant: "primary" },
+    { label: "Profile", path: "/roles"},
+    { label: "Bookings", path: "/roles"},
+    { label: "Vehicles", path: "/roles"},
+    { label: "Log out", path: "/roles", variant: "primary"}
   ];
 
-  const defaultMobileLinks = [
-    { label: "About Us", path: "/about" },
-    { label: "Our Services", scrollTo: "our-services" },
-    { label: "Contact Us", path: "/contact" },
-    { label: "Sign Up", path: "/roles" },
-    { label: "Log In", path: "/login" },
-  ];
+  // const defaultMobileLinks = [
+  //   { label: "About Us", path: "/about" },
+  //   { label: "Our Services", scrollTo: "our-services" },
+  //   { label: "Contact Us", path: "/contact" },
+  //   // { label: "Sign Up", path: "/roles" },
+  //   { label: "Log out", path: "/logout" },
+  // ];
+
+  const defaultMobileLinks = [...defaultNavLinks, ...defaultAuthLinks]
+
 
   return (
     <NavbarTemplate

@@ -168,16 +168,33 @@ import EmployeePerformance from "./pages/employee/EmployeePerformance";
 
 // --- customer --- 
 import LandingCustomer from "./pages/customer/LandingCustomer"
+import CustomerHome from "./pages/customer/CustomerHome"
+
+import CustomerProfile from "./pages/customer/CustomerProfile";
+import CustomerProfileEdit from "./pages/customer/CustomerProfileEdit";
+import EditCustomerProfile from "./pages/customer/older/EditCustomerProfile";
+
+import VehiclePage from "./pages/customer/CustomerVehicles"
+
+
 
 // --- other ---
 import All from "./pages/_temp/All";
 import NotFound from "./pages/other/NotFound"; 
-import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
+import CustomerCardsPage from "./pages/customer/older/CustomerCardPage";
 import Meta from "./pages/other/Meta";
-import ProfilePage from "./pages/customer/ProfilePage";
+import ProfilePage from "./pages/customer/older/ProfilePage";
 import EmployeeManageCustomers from "./pages/employee/EmployeeManageCustomers";
 import EmployeeManageEmployees from "./pages/employee/EmployeeManageEmployees";
 import EmployeeServices from "./pages/employee/EmployeeServices";
+import CustomerVehicles from "./pages/customer/CustomerVehicles";
+import ConfirmBookingPage from "./pages/customer/CustomerConfirm";
+import CustomerBooking from "./pages/customer/CustomerBooking";
+import BookingHistory from "./pages/customer/CustomerBookingHistory";
+
+import BookingTwo from "./pages/customer/CustomerBooking1";
+import BookingVehicle from "./pages/customer/CustomerBookingVehicle";
+
 
 // -------------------------------------------------------------
 
@@ -235,22 +252,28 @@ export default function App() {
 
 
       {/* --- Customer */}
-      <Route path="/customer/home" element={<LandingCustomer />} /> 
-      <Route path="/customer/profile" element={<ProfilePage />} />
+
+      {/* <Route path="/customer" element={<LandingCustomer />} />  */}
+      <Route path="/customer" element={<CustomerHome />} /> 
+      <Route path="/customer/home" element={<CustomerHome />} /> 
+
+      {/* <Route path="/customer/profile" element={<ProfilePage />} /> */}
+      <Route path="/customer/profile" element={<CustomerProfile />} />
+      <Route path="/customer/profile-e" element={<EditCustomerProfile />} />
+      <Route path="/customer/profile-edit" element={<CustomerProfileEdit />} />
+
+      {/* <Route path="/customer/vehicles" element={<VehiclePage />} /> */}
+      <Route path="/customer/vehicles" element={<CustomerVehicles />} />
+      <Route path="/customer/booking" element={<CustomerBooking />} />
+      <Route path="/customer/booking1" element={<BookingTwo />} />
+
+      <Route path="/customer/booking/confirm" element={<ConfirmBookingPage />} />
+
+      <Route path="/customer/booking/history" element={<BookingHistory />} />
+      <Route path="/customer/booking/vehicle" element={<BookingVehicle />} />
 
 
-// {/* 
-//         <Route path="/vehicles" element={<VehiclePage />} />
-//         <Route path="/profiles" element={<ProfilePage />} />
-//         <Route path="/booking" element={<Booking />} />
-//         <Route path="/bookingtwo" element={<BookingTwo />} />
-//         <Route path="/bookingvehicle" element={<BookingVehicle />} /> 
-//         <Route path="/confirm" element={<ConfirmBookingPage />} />
-//         <Route path="/payment/:bookingId" element={<PaymentPage />} />
-//         <Route path="/EditCustomerProfile" element={<EditCustomerProfile />} />
-//         <Route path="/password-reset" element={<PasswordReset />} />
-//         <Route path="/deactivate-account" element={<DeactivateAccount />} />
-//         <Route path="/bookinghistory" element={<BookingHistory />} /> */}
+
          
 
         {/* --- Testing */}
