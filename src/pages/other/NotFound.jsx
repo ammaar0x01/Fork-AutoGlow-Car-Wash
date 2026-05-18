@@ -10,7 +10,7 @@ export default function NotFound() {
         <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-cyan-500 via-sky-600 to-blue-700 text-center px-4">
             {/* Container to center and style content */}
             <div className="p-10 rounded-2xl bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-2xl">
-                <h1 className="text-9xl font-bold text-white mb-4 animate-bounce">
+                <h1 className="text-7xl font-bold text-white mb-4 animate-bounce">
                     404
                 </h1>
                 <h2 className="text-4xl font-semibold text-white mb-6">

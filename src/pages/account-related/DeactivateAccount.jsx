@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { pageNames } from "../pageNames";
+
 
 export default function DeactivateAccount() {
+  document.title = pageNames.deactivate
+  
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();

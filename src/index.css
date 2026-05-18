@@ -15,7 +15,7 @@ Used in the service-related pages
   transform: translateY(0) !important;
 }
 
-
+/* 
 body {
   margin: 0;
 }
@@ -74,12 +74,13 @@ h6 {
   font-size: 1rem !important;
   font-weight: bold !important;
   margin-bottom: 1rem !important;
-}
+} */
+
 
 /*colors*/
-:root {
+/* :root {
   --white: #fff; 
   --dark-grey: #333;
   --light-blue-with-opacity: #0058AB99;
   --dark-blue: #003366;
-}
+} */

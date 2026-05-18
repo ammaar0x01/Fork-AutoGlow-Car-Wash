@@ -1,23 +1,26 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal"; 
-import butterfly from "../../assets/about-us.png";
+// import butterfly from "../../assets/about-us.png";
 import React, { useState, useEffect, useRef } from "react";
 
 import "./LandingCustomer.css";
 
-import NavbarCustomer from "../components/NavbarCustomer"; 
-import Footer from "../components/Footer"; 
+import NavbarCustomer from "../../components/NavbarCustomer"; 
+import Footer from "../../components/Footer"; 
+import ReviewCarousel from "../../components/ReviewCarousel";
 
-import FULL_WASH_IMAGE from "../../assets/full-wash.png";
-import DETAILING_IMAGE from "../../assets/detailing.png";
-import WAXING_IMAGE from "../../assets/waxing.png";
-import INTERIOR_IMAGE from "../../assets/interior.png";
-import HERO_IMAGE from "../../assets/hero-carwash.jpg";
+import FULL_WASH_IMAGE from "../../assets/images/cars/home/full-wash.png";
+import DETAILING_IMAGE from "../../assets/images/cars/home/detailing.png";
+import WAXING_IMAGE from "../../assets/images/cars/home/waxing.png";
+import INTERIOR_IMAGE from "../../assets/images/cars/home/interior.png";
+import HERO_IMAGE from "../../assets/images/cars/home/hero-carwash.jpg";
 
-import ReviewCarousel from "../components/ReviewCarousel";
-import POLISH_IMAGE from "../../assets/polish.png";
-import ENGINE_IMAGE from "../../assets/engine-wash.jpg";
-import ABOUT_IMAGE from "../../assets/about-us.png";
-import MISSION_IMAGE from "../../assets/mission-bg.jpg";
+import POLISH_IMAGE from "../../assets/images/cars/home/polish.png";
+import ENGINE_IMAGE from "../../assets/images/cars/home/engine-wash.jpg";
+
+import ABOUT_IMAGE from "../../assets/images/cars/home/about-us.png";
+import butterfly from "../../assets/images/cars/home/about-us.png";
+
+import MISSION_IMAGE from "../../assets/images/cars/home/mission-bg.jpg";
 
 
 export default function LandingCustomer() {
@@ -236,7 +239,7 @@ export default function LandingCustomer() {
 
         {/* About Us Section with Zoom Effect */}
         <ZoomSection
-            image={ABOUT_IMAGE}
+            // image={ABOUT_IMAGE}
             title="About Us"
             content={
                 <div className="about-content">

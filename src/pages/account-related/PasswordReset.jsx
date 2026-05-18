@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+import { pageNames } from '../pageNames';
 
 export default function PasswordReset() {
-  document.title = "Reset your password"
+  document.title = pageNames.change_password
   
   const [currentPassword, setCurrentPassword] = useState("");
   const [password, setPassword] = useState("");

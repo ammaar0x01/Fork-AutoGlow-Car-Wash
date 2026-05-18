@@ -17,7 +17,6 @@ export default function NavbarEmployee() {
         { label: "Bookings", path: "/roles" },
         { label: "Services", path: "/roles" },
         { label: "Employees", path: "/roles" },
-        { label: "Bookings", path: "/roles" },
     ];
 
     const defaultMobileLinks = [...defaultNavLinks, ...defaultAuthLinks]

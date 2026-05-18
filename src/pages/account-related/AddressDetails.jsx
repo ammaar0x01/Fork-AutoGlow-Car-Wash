@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+import { pageNames } from '../pageNames';
+
 export default function AddressDetails() {
+    document.title = pageNames.address
+    
     const navigate = useNavigate();
     const location = useLocation();
     const managerData = location.state?.manager || null;

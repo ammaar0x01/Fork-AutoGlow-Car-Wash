@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Assets
+import { pageNames } from "../pageNames";
+
 import image1 from '../../assets/images/cars/login/image-1.png';
 import image2 from '../../assets/images/cars/login/image-2.png';
 import image3 from '../../assets/images/cars/login/image-3.png';
 import interior from '../../assets/images/cars/login/interior.png';
 
 export default function Login() {
-  document.title = "Login | MobileGlow";
+  document.title = pageNames.login
   
   const navigate = useNavigate();
   const [login, setLogin] = useState({ email: "", password: "" });

@@ -159,21 +159,25 @@ import DeactivateAccount from "./pages/account-related/DeactivateAccount";
 import EmployeeHome from "./pages/employee/EmployeeHome";
 import EmployeeProfile from "./pages/employee/EmployeeProfile";
 import EmployeeProfileEdit from "./pages/employee/EmployeeProfileEdit";
-import EmployeeProfileManagement from "./pages/employee/EmplioyeeProfileManagement";
-import EmployeePayment from "./pages/employee/booking/EmployeePayment";
-import EmployeeManageBookings from "./pages/employee/booking/EmployeeManageBookings";
-import EmployeeCleaning from "./pages/employee/management/EmployeeCleaning";
-import EmployeeManagement from "./pages/employee/management/EmployeeManagement";
-import EmployeePerformance from "./pages/employee/management/EmployeePerformance";
+// import EmployeeProfileManagement from "./pages/employee/EmplioyeeProfileManagement";
+import EmployeePayment from "./pages/employee/EmployeePayments";
+import EmployeeManageBookings from "./pages/employee/EmployeeManageBookings";
+import EmployeeCleaning from "./pages/employee/EmployeeServices";
+import EmployeeManagement from "./pages/employee/EmployeeManageEmployees";
+import EmployeePerformance from "./pages/employee/EmployeePerformance";
 
 // --- customer --- 
-
+import LandingCustomer from "./pages/customer/LandingCustomer"
 
 // --- other ---
 import All from "./pages/_temp/All";
 import NotFound from "./pages/other/NotFound"; 
 import CustomerCardsPage from "./pages/customer/booking/CustomerCardPage";
 import Meta from "./pages/other/Meta";
+import ProfilePage from "./pages/customer/ProfilePage";
+import EmployeeManageCustomers from "./pages/employee/EmployeeManageCustomers";
+import EmployeeManageEmployees from "./pages/employee/EmployeeManageEmployees";
+import EmployeeServices from "./pages/employee/EmployeeServices";
 
 // -------------------------------------------------------------
 
@@ -218,22 +222,21 @@ export default function App() {
         
         <Route path="/employee/profile" element={<EmployeeProfile />} /> 
         <Route path="/employee/profile-edit" element={<EmployeeProfileEdit />} /> 
-        {/* <Route path="/employee/profile-manage" element={<EmployeeProfileManagement />} />  */}
-        <Route path="/employee/manage-customers" element={<EmployeeProfileManagement />} /> 
+
+        <Route path="/employee/services" element={<EmployeeServices />} /> 
+        <Route path="/employee/manage-customers" element={<EmployeeManageCustomers />} /> 
+        <Route path="/employee/manage-employees" element={<EmployeeManageEmployees />} /> 
 
         
         <Route path="/employee/payments" element={<EmployeePayment />} /> 
         <Route path="/employee/bookings" element={<EmployeeManageBookings />} /> 
-        <Route path="/employee/cleaning" element={<EmployeeCleaning />} /> 
-        {/* <Route path="/employee/management" element={<EmployeeManagement />} />  */}
-        <Route path="/employee/manage-employees" element={<EmployeeManagement />} /> 
-
+        {/* <Route path="/employee/cleaning" element={<EmployeeCleaning />} />  */}
         <Route path="/employee/performance" element={<EmployeePerformance />} /> 
 
 
-//         {/* --- Customer */}
-//         {/* <Route path="/customer/home" element={<LandingCustomer />} />  */}
-//         {/* <Route path="/customer/exterir-account" element={<DeactivateAccount />} /> */}
+      {/* --- Customer */}
+      <Route path="/customer/home" element={<LandingCustomer />} /> 
+      <Route path="/customer/profile" element={<ProfilePage />} />
 
 
 // {/* 
@@ -251,10 +254,14 @@ export default function App() {
          
 
         {/* --- Testing */}
-        <Route path="/temp/all" element={<All />} />
-        <Route path="/temp/password" element={<PasswordReset />} />
+        {/* <Route path="/temp/all" element={<All />} />
+        <Route path="/temp/password" element={<PasswordReset />} /> */}
 
         <Route path="/temp/card" element={<CustomerCardsPage />} />
+        {/* <Route path="/employee/m" element={<EmployeeManagement />} />  */}
+
+
+        {/* --- Other */}
         <Route path="/_metadata" element={<Meta />} />
         <Route path="/_" element={<Meta />} />
 
