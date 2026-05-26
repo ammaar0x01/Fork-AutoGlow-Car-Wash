@@ -99,11 +99,14 @@ mongosh
 </pre>
 
 <pre>
+ONLY FOR GITHUB PAGES
 Help to deploy on github pages 
 
 https://www.youtube.com/watch?v=hn1IkJk24ow
 
 - add a 'homepage' key to the package.json file 
+  "homepage": "https://ammaar0x01.github.io/Fork_AutoGlow_Car_Wash/",
+
 - run `npm install gh-pages --save-dev`
 - add to package.json
  "start": "react-scripts start",
@@ -119,6 +122,17 @@ click Pages on the left menu, and ensure the source is set to
 deploy from your specific branch.
 
 </pre>
+
+
+```
+Hide warnings 
+"scripts": {
+  "start": "NODE_OPTIONS='--no-deprecation' react-scripts start",
+  "build": "NODE_OPTIONS='--no-deprecation' react-scripts build"
+}
+
+
+```
 
 <hr />
 
@@ -157,5 +171,17 @@ folders       - kebab case; example 'a-new-folder'
 .js   - camel case; example, aNewFile.js
 .jsx  - pascal case; example, ANewFile.jsx
 </pre>
+
+## Notes
+```
+Identify and Update Outdated Packages
+Most deprecation warnings disappear when you update your project dependencies to versions that natively support your current Node.js runtime.
+
+Check for updates: Run npm outdated to see which packages have newer versions available.
+
+Safe update: Run npm update to update packages within safe semantic version boundaries.
+
+Major upgrade: Run npx npm-check-updates -u followed by npm install to force upgrade all packages to their latest major releases.
+```
 
 <hr />
