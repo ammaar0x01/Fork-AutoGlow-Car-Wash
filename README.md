@@ -5,7 +5,7 @@
 - Started:  2025-05-0d
 - Updated:  2026-05-17
 - Status:   work-in-progress
-- Version:  0.3
+- Version:  0.4
 - Branch:   frontend-main
 
 - Developers 
@@ -56,6 +56,70 @@ npm run build
 # Serve the built version of the app
 serve -s build 
 ```
+
+<pre>
+# === BACKEND === 
+# Used in Fedora 43 to run the mongo service
+podman run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  -v mongodb_data:/data/db \
+  docker.io/mongo:8
+
+# or 
+podman run -d \
+  --name mongodb \
+  --restart=always \
+  -p 27017:27017 \
+  -v mongodb_data:/data/db \
+  docker.io/mongo:8
+
+# better
+
+# remove broken container
+podman stop mongodb
+podman rm mongodb
+
+podman run -d \
+  --name mongodb \
+  --network host \
+  -v mongodb_data:/data/db \
+  docker.io/mongo:8
+
+# --- seems to work ---
+sudo podman rm mongodb
+
+sudo podman run -d \
+  --name mongodb \
+  --network host \
+  docker.io/mongo:7
+
+mongosh
+
+</pre>
+
+<pre>
+Help to deploy on github pages 
+
+https://www.youtube.com/watch?v=hn1IkJk24ow
+
+- add a 'homepage' key to the package.json file 
+- run `npm install gh-pages --save-dev`
+- add to package.json
+ "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
+
+- Deploy your app: Run `npm run deploy` in your terminal. 
+  This triggers the build and pushes it to a gh-pages branch on GitHub automatically.
+
+- Enable on GitHub: Go to your GitHub repository settings, 
+click Pages on the left menu, and ensure the source is set to 
+deploy from your specific branch.
+
+</pre>
+
 <hr />
 
 
